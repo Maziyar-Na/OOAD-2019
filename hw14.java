@@ -54,12 +54,14 @@ public class hw14 {
          shapes.add(s);
       }
       // Display the shppe list and select shape to draw
-      while(true){
+      //while(true){
          System.out.println("");
          System.out.println("==Select the numer of shape==");
          for(int i = 0;i<shapes.size();i++){
             System.out.printf("%d: %s %n",i+1,collection[i]);
+            Display(shapes,i);
          }
+         /*
          System.out.println("4: Exit");
          // Keyboard input
          choice = keyboard.nextInt();
@@ -70,7 +72,7 @@ public class hw14 {
             System.exit(0);
          }else{
             System.out.println("Please type number 1 ~ 4.");
-         }
-      }
+         }*/
+      //}
    }
 }
