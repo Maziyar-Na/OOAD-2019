@@ -1,5 +1,4 @@
 # OOAD-2019
- CSCI 5448 Homework 1 problem 4
  Group members:
 1. Sepideh Goodarzy
 2. Maram Kurdi
