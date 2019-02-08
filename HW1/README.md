@@ -4,7 +4,7 @@
 1. Sepideh Goodarzy
 2. Maram Kurdi
 3. Maziyar Nazari
-4. Jaeyoung Oh
+4. Dwight Browne
 
  * File list
    - hw14.java: main function
