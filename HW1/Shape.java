@@ -1,6 +1,6 @@
 /*-------------------------------------
  * CSCI5448 Homework 1 problem 4
- * Team member : Jaeyoung Oh, Sepideh Goodarzy, Maram Kurdi, Maziyar Nazari
+ * Team member : Sepideh Goodarzy, Maram Kurdi, Maziyar Nazari, Dwight Browne
  * Compile: javac hw14.java Shape.java Square.java Triangle.java Circle.java
  * Usage: java hw14
  * ShpaeList.txt : collection of shapes
