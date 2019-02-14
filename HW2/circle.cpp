@@ -1,21 +1,14 @@
-class Circle : public Shape {
-public:
-    Circle(int init_x, int init_y, int r);
-    virtual void display();
-    int get_radius() {return radius;}
-private:
-    int radius;
-};
+#include "circle.h"
 
 Circle::Circle(int init_x, int init_y, int r)
     : Shape(init_x, init_y)
 {
     if (r <= 0)
-	    throw IllegalArgumentException();
+	    cout << "Error: radius is less than 0" << endl;
     radius = r;
 }
 
 void Circle::display()
 {
-    cout << "Circle: " << x << ',' << y << ',' << radius << endl;
+    cout << "Circle: " << x << ',' << y << ',' << "Radius: " << radius << endl;
 }

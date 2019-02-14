@@ -1,23 +1,14 @@
-class Triangle : public Shape(){
-public:
-  Triangle(int init_x, int init_y, int _width, int _height);
-  virtual void display();
-  int get_width() {return width;}
-  int get_height() {return height;}
-private:
-  int width;
-  int height;
-};
+#include "triangle.h"
 
 Triangle::Triangle(int init_x, int init_y, int _width, int _height)
   :Shape(init_x, init_y)
 {
   if (_width <= 0 || _height <= 0)
-    throw IllegalArgumentException();
+    cout << "Error: Width or Height is less than 0" << endl;
   width = _width;
   height = _height;
 }
 
 void Triangle::display(){
-  cout << "Triangle: " << x << ',' << y << ',' << width << ',' << height << endl;
+  cout << "Triangle: " << x << ',' << y << ',' << "Width: " << width << ',' <<"Height: " << height << endl;
 }

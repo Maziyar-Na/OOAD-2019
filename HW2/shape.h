@@ -1,3 +1,10 @@
+#ifndef __SHAPE__
+#define __SHAPE__
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Shape {
 public:
     Shape(int init_x, int init_y) : x(init_x), y(init_y) {}
@@ -9,3 +16,5 @@ protected:
     int x;
     int y;
 };
+
+#endif

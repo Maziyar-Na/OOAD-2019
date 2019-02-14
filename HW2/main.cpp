@@ -1,4 +1,4 @@
-#include ".h"
+#include "MainProgram.h"
 
 int main(int argc, char const *argv[]) {
   MainProgram mp;
