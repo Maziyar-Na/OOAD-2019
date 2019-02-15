@@ -3,7 +3,7 @@
 MainProgram::MainProgram(){
 
 }
-
+/*We created a class responsible for implementing the question's procedure(to be able to run different procedures without changing the main.cpp).*/
 void MainProgram::run(){
   Circle* c = new Circle(1, 2, 5);
   Square* s = new Square(4, 5, 5, 5);

@@ -14,3 +14,4 @@
  * Compile: make
  * Usage: ./Q6
  * Clean: make clean
+ * Change log: We added a sort function to the collection class(Now, we can change the sort algorithm without changing the main program). The display function has been changed (It only shows a line containing the coordinates of the center of the shape and their specific elements like radius for circle). We created a class responsible for implementing the question's procedure(to be able to run different procedures without changing the main.cpp). We added functions: 1- get_num_of_shapes and 2- get_collection to the collection class to abstract the functionality of "get number of shapes" and "how collection saves shapes" of the collection class from the main program. 
