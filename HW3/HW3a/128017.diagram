@@ -2,45 +2,45 @@ format 221
 
 classcanvas 128017 class_ref 128017 // Rental
   classdiagramsettings hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 end
-  xyzwh 171.5 303 2000 191 227
+  xyzwh 172.201 303.246 2000 190 227
 end
 classcanvas 128145 class_ref 128145 // Tool
   classdiagramsettings hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_multiplicity yes member_max_width 0 end
-  xyz 403 284.5 2000
+  xyz 403.332 284.598 2000
 end
 classcanvas 130065 class_ref 128913 // Customer
   classdiagramsettings hide_attributes no hide_operations no member_max_width 0 end
-  xyz 194 573 2000
+  xyz 194.362 573.852 2000
 end
 classcanvas 130193 class_ref 129041 // Business
   classdiagramsettings member_max_width 0 end
-  xyz 368.5 907.5 2000
+  xyz 368.67 907.305 2000
 end
 classcanvas 130449 class_ref 129169 // Regular
   classdiagramsettings member_max_width 0 end
-  xyz 207.5 910 2000
+  xyz 207.141 910.764 2000
 end
 classcanvas 130705 class_ref 129297 // Casual
   classdiagramsettings member_max_width 0 end
-  xyz 42 907.5 2000
+  xyz 42.0713 907.305 2000
 end
 classcanvas 131345 class_ref 129425 // store
   classdiagramsettings member_max_width 0 end
-  xyz 445 681 2000
+  xyz 445.702 681.852 2000
 end
 classcanvas 135825 class_ref 129553 // Inventory
   classdiagramsettings member_max_width 0 end
-  xyz 396 40.5 2000
+  xyz 396.332 40.9128 2000
 end
 classcanvas 137873 class_ref 136209 // ToolType
   classdiagramsettings member_max_width 0 end
-  xyz 584 403.5 2000
+  xyz 584.666 403.228 2000
 end
 relationcanvas 130321 relation_ref 128657 // <generalisation>
   geometry VHV unfixed
   decenter_begin 528
-  from ref 130193 z 2001 to point 429 866
-  line 137361 z 2001 to point 269 866
+  from ref 130193 z 2001 to point 429 866.504
+  line 137361 z 2001 to point 269 866.504
   line 137489 z 2001 to ref 130065
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -53,8 +53,8 @@ relationcanvas 130577 relation_ref 128785 // <generalisation>
 end
 relationcanvas 130833 relation_ref 128913 // <generalisation>
   geometry VHV unfixed
-  from ref 130705 z 2001 to point 101 866
-  line 134033 z 2001 to point 269 866
+  from ref 130705 z 2001 to point 101.071 866.504
+  line 134033 z 2001 to point 269.362 866.504
   line 134161 z 2001 to ref 130065
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -62,27 +62,27 @@ end
 relationcanvas 135441 relation_ref 129553 // <association>
   from ref 131345 z 2001 to ref 128145
   no_role_a no_role_b
-  multiplicity_a_pos 452 563 3000 multiplicity_b_pos 457 669 3000
+  multiplicity_a_pos 451 559 3000 multiplicity_b_pos 456 669 3000
 end
 relationcanvas 136465 relation_ref 129809 // <association>
   decenter_begin 482
-  from ref 135825 z 2001 to point 670 138
-  line 138641 z 2001 to point 670 698
+  from ref 135825 z 2001 to point 670.164 138.243
+  line 138641 z 2001 to point 670.164 698.213
   line 138897 z 2001 to ref 131345
   no_role_a no_role_b
-  multiplicity_a_pos 499 703 3000 multiplicity_b_pos 543 143 3000
+  multiplicity_a_pos 499 703 3000 multiplicity_b_pos 544 143 3000
 end
 relationcanvas 137105 relation_ref 129937 // <aggregation>
   decenter_end 518
   from ref 130065 z 2001 to ref 128017
   no_role_a no_role_b
-  multiplicity_a_pos 261 535 3000 multiplicity_b_pos 258 561 3000
+  multiplicity_a_pos 261 534 3000 multiplicity_b_pos 258 564 3000
 end
 relationcanvas 137233 relation_ref 130065 // <aggregation>
   decenter_end 487
   from ref 128017 z 2001 to ref 128145
   no_role_a no_role_b
-  multiplicity_a_pos 381 423 3000 multiplicity_b_pos 367 424 3000
+  multiplicity_a_pos 380 423 3000 multiplicity_b_pos 367 424 3000
 end
 relationcanvas 137617 relation_ref 136593 // <association>
   from ref 130065 z 2001 to ref 131345
@@ -94,20 +94,20 @@ relationcanvas 138001 relation_ref 143121 // <association>
   decenter_end 400
   from ref 128145 z 2001 to ref 137873
   no_role_a no_role_b
-  multiplicity_a_pos 563 422 3000 multiplicity_b_pos 537 423 3000
+  multiplicity_a_pos 564 422 3000 multiplicity_b_pos 538 423 3000
 end
 relationcanvas 138385 relation_ref 143249 // <association>
   geometry VH unfixed
   decenter_begin 518
   decenter_end 482
-  from ref 128017 z 2001 to point 267 135
+  from ref 128017 z 2001 to point 268 135
   line 139025 z 2001 to ref 135825
   no_role_a no_role_b
-  multiplicity_a_pos 387 143 3000 multiplicity_b_pos 249 291 3000
+  multiplicity_a_pos 385 143 3000 multiplicity_b_pos 250 290 3000
 end
 relationcanvas 138769 relation_ref 143377 // <association>
   from ref 135825 z 2001 to ref 128145
-  role_a_pos 473 272 3000 no_role_b
-  no_multiplicity_a multiplicity_b_pos 457 247 3000
+  role_a_pos 473 276 3000 no_role_b
+  no_multiplicity_a multiplicity_b_pos 457 244 3000
 end
 end

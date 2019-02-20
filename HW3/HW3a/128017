@@ -416,7 +416,7 @@ ${docstring}${body}
     end
 
     class 128145 "Tool"
-      abstract visibility public 
+      visibility public 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
 ${inlines}
