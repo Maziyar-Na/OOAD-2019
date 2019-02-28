@@ -1,0 +1,92 @@
+format 221
+
+classcanvas 128017 class_ref 128017 // Rental
+  classdiagramsettings hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 end
+  xyzwh 144.826 349.246 2000 190 359
+end
+classcanvas 128145 class_ref 128145 // Tool
+  classdiagramsettings hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_multiplicity yes member_max_width 0 end
+  xyz 278.694 39.4155 2000
+end
+classcanvas 130065 class_ref 128913 // Customer
+  classdiagramsettings hide_attributes no hide_operations no member_max_width 0 end
+  xyz 169.657 743.077 2000
+end
+classcanvas 130193 class_ref 129041 // Business
+  classdiagramsettings member_max_width 0 end
+  xyz 183.33 1098.05 2000
+end
+classcanvas 130449 class_ref 129169 // Regular
+  classdiagramsettings member_max_width 0 end
+  xyz 39.5354 1098.05 2000
+end
+classcanvas 130705 class_ref 129297 // Casual
+  classdiagramsettings member_max_width 0 end
+  xyz 327.124 1098.05 2000
+end
+classcanvas 131345 class_ref 129425 // store
+  classdiagramsettings member_max_width 0 end
+  xyz 362.694 858.405 2000
+end
+classcanvas 135825 class_ref 129553 // Inventory
+  classdiagramsettings member_max_width 0 end
+  xyz 377.694 421.246 2000
+end
+relationcanvas 130321 relation_ref 128657 // <generalisation>
+  decenter_begin 532
+  from ref 130193 z 2001 to ref 130065
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130577 relation_ref 128785 // <generalisation>
+  geometry VHV unfixed
+  decenter_begin 532
+  from ref 130449 z 2001 to point 93 1056.73
+  line 139409 z 2001 to point 292 1056.73
+  line 139793 z 2001 to ref 130065
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130833 relation_ref 128913 // <generalisation>
+  geometry VHV unfixed
+  decenter_begin 457
+  from ref 130705 z 2001 to point 373 1056.76
+  line 134033 z 2001 to point 238 1056.76
+  line 134161 z 2001 to ref 130065
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136465 relation_ref 129809 // <association>
+  from ref 135825 z 2001 to ref 131345
+  no_role_a no_role_b
+  multiplicity_a_pos 432 844 3000 multiplicity_b_pos 432 640 3000
+end
+relationcanvas 137105 relation_ref 129937 // <aggregation>
+  from ref 130065 z 2001 to ref 128017
+  no_role_a no_role_b
+  multiplicity_a_pos 225 712 3000 multiplicity_b_pos 223 729 3000
+end
+relationcanvas 137233 relation_ref 130065 // <aggregation>
+  geometry VH unfixed
+  from ref 128017 z 2001 to point 237.826 174.415
+  line 140561 z 2001 to ref 128145
+  no_role_a no_role_b
+  multiplicity_a_pos 250 181 3000 multiplicity_b_pos 223 335 3000
+end
+relationcanvas 137617 relation_ref 136593 // <association>
+  decenter_end 415
+  from ref 130065 z 2001 to ref 131345
+  no_role_a no_role_b
+  multiplicity_a_pos 345 884 3000 multiplicity_b_pos 321 886 3000
+end
+relationcanvas 138385 relation_ref 143249 // <association>
+  from ref 128017 z 2001 to ref 135825
+  no_role_a no_role_b
+  multiplicity_a_pos 360 533 3000 multiplicity_b_pos 344 533 3000
+end
+relationcanvas 141329 relation_ref 150033 // <aggregation>
+  from ref 135825 z 2001 to ref 128145
+  no_role_a no_role_b
+  multiplicity_a_pos 427 318 3000 multiplicity_b_pos 432 407 3000
+end
+end

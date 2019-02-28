@@ -1,0 +1,25 @@
+window_sizes 2748 2065 450 2292 1949 64
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128017 // storeTest
+    2093 1933 167 Letter 0 0
+end
+show_stereotypes
+selected attribute_ref 128017 // startDate
+open
+  class_ref 128017 // Rental
+  classrelation_ref 145041 // <association>
+  class_ref 128273 // Painting
+  class_ref 128401 // Concrete
+  class_ref 128529 // Plumbing
+  class_ref 128657 // WoodWork
+  class_ref 128785 // Yardwork
+  class_ref 128913 // Customer
+  class_ref 129041 // Business
+  class_ref 129169 // Regular
+  class_ref 129297 // Casual
+  class_ref 129553 // Inventory
+  class_ref 136209 // ToolCategory
+end
+end
+verbose
