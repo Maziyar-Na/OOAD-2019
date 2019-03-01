@@ -267,24 +267,6 @@ ${docstring}${body}
 	
       end
 
-      operation 128785 "getTools"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
       operation 128913 "computeRentalFees"
 	public explicit_return_type ""
 	nparams 0
@@ -538,24 +520,6 @@ ${docstring}${body}
       end
 
       operation 147985 "setIsActive"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
-      operation 148113 "getIsAvtive"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -1335,21 +1299,6 @@ ${docstring}${members}
 	MysqlColumn
       end
 
-      attribute 129681 "rentalNights"
-	protected explicit_type "int"
-	multiplicity "1..7"
-	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${stereotype}<${type}> ${name}${value};
-"
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	php_decl ""
-	python_decl "${comment}${self}${name} = ${stereotype}()
-"
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
       attribute 129809 "maxToolCount"
 	protected explicit_type "int"
 	init_value "3"
@@ -1381,7 +1330,7 @@ ${docstring}${members}
       end
 
       attribute 130065 "toolCount"
-	protected explicit_type "int"
+	private explicit_type "int"
 	multiplicity "1..3"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${stereotype}<${type}> ${name}${value};
 "
@@ -1486,42 +1435,6 @@ ${docstring}${body}
       end
 
       operation 131601 "getToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
-      operation 131729 "setRentalNights"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
-      operation 131857 "getRentalNights"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -1948,24 +1861,6 @@ ${docstring}${body}
 	
       end
 
-      operation 149521 "setToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
       operation 149905 "setMaxToolCount"
 	public explicit_return_type ""
 	nparams 0
@@ -2084,24 +1979,6 @@ ${docstring}${body}
 	
       end
 
-      operation 149393 "setToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
       operation 149777 "setMaxToolCount"
 	public explicit_return_type ""
 	nparams 0
@@ -2203,24 +2080,6 @@ ${docstring}${body}
       end
 
       operation 149265 "setMinToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
-      operation 149649 "setToolCount"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -2891,24 +2750,6 @@ ${docstring}${body}
 	    classrelation_ref 151953 // <aggregation>
       end
 
-      operation 147729 "getRentalbyID"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
       classrelation 158481 // <aggregation>
 	relation 156561 o---
 	  a role_name "" private
@@ -2934,6 +2775,24 @@ ${docstring}${body}
       end
 
       operation 160145 "updateRentals"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 160529 "getToolsAvailable"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
