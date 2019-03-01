@@ -7,9 +7,26 @@
 4. Dwight Browne
 
  * File list
-   - UML1.pdf   Uml Diagram for the design
+   - UMLFINAL.pdf   Uml Diagram for the design
    - HW3UmlSource   Bouml project source
-   * source
-     - file1
-     - file2
-    
+   * source located in Final Codes
+    - Business.cpp    
+    - Casual.cpp      
+    - Customer.cpp    
+    - Inventory.cpp   
+    - Makefile        
+    - Regular.h      
+    - Rental.h       
+    - Simulation.h    
+    - Store.h         
+    - Tool.h
+    - Business.h      
+    - Casual.h        
+    - Customer.h      
+    - Inventory.h    
+    - Regular.cpp     
+    - Rental.cpp      
+    - Simulation.cpp  
+    - Store.cpp       
+    - Tool.cpp        
+    - main.cpp
