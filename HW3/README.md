@@ -9,7 +9,7 @@
  * File list
    - UMLFINAL.pdf   Uml Diagram for the design
    - HW3UmlSource   Bouml project source
-   * source located in Final Codes
+ * source located in Final Codes
     - Business.cpp    
     - Casual.cpp      
     - Customer.cpp    
