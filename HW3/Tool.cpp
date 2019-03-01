@@ -1,5 +1,15 @@
 #include "Tool.h"
 
+Tool :: Tool(string toolName, double toolPrice, bool rentStat, int rentDate, int rentDuration, int rentID, string toolCategory)
+{
+name = toolName;
+price = toolPrice;
+isRented = rentStat; 
+rentalDate = rentDate; 
+rentalDuration = rentDuration;
+rentalID = rentID; 
+category = toolCategory; 
+}
 string Tool::getName() {
 	return this->name;
 }
