@@ -24,6 +24,14 @@ bool Tool::getRentalStat() {
 	return this->isRented;
 }
 
+void Tool::setRentalDate(int rentDate) {
+	this->rentalDate = rentDate;
+}
+
+int Tool::getRentalDat() {
+	return this->rentalDate;
+}
+
 int Tool::getRentalDuration() {
 	return this->rentalDuration;
 }
