@@ -7,7 +7,7 @@
 Simulation::Simulation() {
     report.open("report.txt");
 }
-
+//Simulate the scenario which we wanted
 void Simulation::simulate()
 {
     store = new Store();
@@ -64,6 +64,7 @@ void Simulation::simulate()
     report.close();
 }
 
+//Genrate 20 tools
 vector<Tool*> Simulation::generateToolList(){
     vector<Tool*> res;
     res.push_back( new Tool(1,"Tape",10,false,"Painting"));
@@ -93,6 +94,7 @@ vector<Tool*> Simulation::generateToolList(){
     return res;
 }
 
+//Generate 10 random customers
 vector<Customer*> Simulation::generateCustomerList(){
     vector<Customer*> customers ;
     customers.push_back(new Business("Steve"));
@@ -108,6 +110,7 @@ vector<Customer*> Simulation::generateCustomerList(){
     return customers;
 }
 
+//check the conditions and make rentals
 Rental* Simulation::generateRental(Customer* customer, int dateNumber, vector<Tool*> availableToolList, int ID){
     Rental* r ;
     if(customer-> getType() == "Business"){

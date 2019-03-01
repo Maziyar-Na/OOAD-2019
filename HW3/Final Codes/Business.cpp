@@ -27,10 +27,6 @@ void Business::setMinToolCount() {
     Customer::minToolCount = 3;
 }
 
-void Business::setToolCount(int toolCount) {
-    Customer::toolCount = toolCount;
-}
-
 string Business::getType(){
     return "Business" ;
 }

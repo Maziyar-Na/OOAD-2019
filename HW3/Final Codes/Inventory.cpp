@@ -34,7 +34,8 @@ void Inventory::setOutstandingRentals(int _outstandingRentals)
 
 vector<Rental*> Inventory::getRentalsByDate()
 {
-
+	vector<Rental*> v;
+	return v;
 }
 
 vector<Rental*> Inventory::getRentals()

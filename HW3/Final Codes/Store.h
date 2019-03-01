@@ -13,7 +13,7 @@ class Store {
 private:
     Inventory* inventory;
     vector<Customer*> customers;
-    int revenue;
+    double revenue;
 
 public:
     Store();

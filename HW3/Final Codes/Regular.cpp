@@ -27,10 +27,6 @@ void Regular::setMinToolCount() {
     Customer::minToolCount = 1;
 }
 
-void Regular::setToolCount(int toolCount) {
-    Customer::toolCount = toolCount;
-}
-
 string Regular::getType(){
     return "Regular" ;
 }
