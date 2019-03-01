@@ -1,5 +1,5 @@
 # OOAD-2019
- CSCI 5448 Homework 2 problem 6
+ CSCI 5448 Homework 3
  Group members:
 1. Sepideh Goodarzy
 2. Maram Kurdi
@@ -30,3 +30,8 @@
     - Store.cpp       
     - Tool.cpp        
     - main.cpp
+
+How to compile and run:
+1- make
+2- ./Simulation
+3- see report.txt
