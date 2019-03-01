@@ -13,6 +13,8 @@ private:
 	string category;
 
 public:
+	Tool(string toolName, double toolPrice, bool rentStat, int rentDate, int rentDuration, int rentID, string toolCategory);
+	
 	string getName();
 
 	void setName(string toolName);
