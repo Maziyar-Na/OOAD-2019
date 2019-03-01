@@ -28,7 +28,7 @@ void Tool::setRentalDate(int rentDate) {
 	this->rentalDate = rentDate;
 }
 
-int Tool::getRentalDat() {
+int Tool::getRentalDate() {
 	return this->rentalDate;
 }
 
