@@ -1416,42 +1416,6 @@ ${docstring}${body}
 	
       end
 
-      operation 131473 "setToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
-      operation 131601 "getToolCount"
-	public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-      end
-
       operation 131985 "setToolCount"
 	public explicit_return_type ""
 	nparams 0
@@ -1599,7 +1563,7 @@ ${docstring}${body}
 	    classrelation_ref 137873 // <association>
       end
 
-      operation 148497 "setMaxTollCount"
+      operation 148497 "setMaxToolCount"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -1617,7 +1581,7 @@ ${docstring}${body}
 	
       end
 
-      operation 148625 "setMinTollCount"
+      operation 148625 "setMinToolCount"
 	public explicit_return_type ""
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -1795,6 +1759,20 @@ ${docstring}${body}
 ${docstring}${body}
 "
 	
+      end
+
+      attribute 152849 "minRentalNight"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 

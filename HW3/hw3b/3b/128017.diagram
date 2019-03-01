@@ -10,15 +10,15 @@ classcanvas 128145 class_ref 128145 // Tool
 end
 classcanvas 130065 class_ref 128913 // Customer
   classdiagramsettings hide_attributes no hide_operations no member_max_width 0 end
-  xyz 171 589 2995
+  xyz 172 595 2995
 end
 classcanvas 130193 class_ref 129041 // Business
   classdiagramsettings member_max_width 0 end
-  xyz 355 1056 2000
+  xyz 351 1056 2000
 end
 classcanvas 130449 class_ref 129169 // Regular
   classdiagramsettings member_max_width 0 end
-  xyz 196 1056 2000
+  xyz 197 1056 2000
 end
 classcanvas 130705 class_ref 129297 // Casual
   classdiagramsettings member_max_width 0 end
@@ -34,8 +34,8 @@ classcanvas 135825 class_ref 129553 // Inventory
 end
 relationcanvas 130321 relation_ref 128657 // <generalisation>
   geometry VHV unfixed
-  from ref 130193 z 3006 to point 410 1015.93
-  line 141457 z 3006 to point 252 1016.93
+  from ref 130193 z 3006 to point 406 1015.93
+  line 141457 z 3006 to point 254 1016.93
   line 142481 z 3006 to ref 130065
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -49,7 +49,7 @@ relationcanvas 130833 relation_ref 128913 // <generalisation>
   geometry VHV unfixed
   decenter_begin 461
   from ref 130705 z 3006 to point 93 1016.24
-  line 134033 z 3006 to point 308 1016.24
+  line 134033 z 3006 to point 305 1016.24
   line 134161 z 3006 to ref 130065
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -58,7 +58,7 @@ relationcanvas 137105 relation_ref 129937 // <aggregation>
   decenter_end 509
   from ref 130065 z 3006 to ref 128017
   no_role_a no_role_b
-  multiplicity_a_pos 367 764 3000 multiplicity_b_pos 347 763 3000
+  multiplicity_a_pos 367 764 3000 multiplicity_b_pos 348 763 3000
 end
 relationcanvas 137233 relation_ref 130065 // <aggregation>
   decenter_end 486
@@ -69,8 +69,8 @@ end
 relationcanvas 138385 relation_ref 143249 // <association>
   decenter_begin 509
   decenter_end 515
-  from ref 128017 z 2001 to point 687.149 760.898
-  line 142225 z 2001 to point 687.149 152.608
+  from ref 128017 z 2001 to point 687.649 760.898
+  line 142225 z 2001 to point 687.649 152.608
   line 142353 z 2001 to ref 135825
   no_role_a no_role_b
   multiplicity_a_pos 560 156 3000 multiplicity_b_pos 576 764 3000
@@ -91,6 +91,6 @@ end
 relationcanvas 141969 relation_ref 156817 // <aggregation>
   from ref 131345 z 3006 to ref 130065
   no_role_a no_role_b
-  multiplicity_a_pos 238 576 3000 multiplicity_b_pos 244 230 3000
+  multiplicity_a_pos 238 582 3000 multiplicity_b_pos 245 230 3000
 end
 end
