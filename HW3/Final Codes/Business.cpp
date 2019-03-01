@@ -5,8 +5,18 @@
 #include "Business.h"
 
 Business::Business(string name) :Customer(name){
+    setMaxRentalNight();
+    setMinRentalNight();
     setMaxToolCount();
     setMinToolCount();
+}
+
+void Business::setMaxRentalNight(){
+    Customer::maxRentalNight = 7 ;
+}
+
+void Business::setMinRentalNight(){
+    Customer::minRentalNight = 7 ;
 }
 
 void Business::setMaxToolCount() {
@@ -19,4 +29,8 @@ void Business::setMinToolCount() {
 
 void Business::setToolCount(int toolCount) {
     Customer::toolCount = toolCount;
+}
+
+string Business::getType(){
+    return "Business" ;
 }

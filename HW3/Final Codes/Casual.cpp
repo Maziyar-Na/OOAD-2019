@@ -5,8 +5,19 @@
 #include "Casual.h"
 
 Casual::Casual(string name) :Customer(name){
+    setMaxRentalNight();
+    setMinRentalNight();
     setMaxToolCount();
     setMinToolCount();
+}
+
+
+void Casual::setMaxRentalNight(){
+    Customer::maxRentalNight = 2 ;
+}
+
+void Casual::setMinRentalNight(){
+    Customer::minRentalNight = 1 ;
 }
 
 void Casual::setMaxToolCount() {
@@ -19,4 +30,8 @@ void Casual::setMinToolCount() {
 
 void Casual::setToolCount(int toolCount) {
     Customer::toolCount = toolCount;
+}
+
+string Casual::getType(){
+    return "Casual" ;
 }

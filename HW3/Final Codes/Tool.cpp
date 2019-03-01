@@ -4,15 +4,12 @@
 using namespace std;
 
 
-Tool :: Tool(int toolID,string toolName, double toolPrice, bool rentStat, int rentDate, int rentDuration, int rentID, string toolCategory)
+Tool :: Tool(int toolID,string toolName, double toolPrice, bool rentStat, string toolCategory)
 {
     tool_ID = toolID;
     name = toolName;
     price = toolPrice;
     isRented = rentStat;
-    rentalDate = rentDate;
-    rentalDuration = rentDuration;
-    rentalID = rentID;
     category = toolCategory;
 }
 
@@ -46,30 +43,6 @@ void Tool::setRentalStat(bool rentStat) {
 
 bool Tool::getRentalStat() {
     return this->isRented;
-}
-
-void Tool::setRentalDate(int rentDate) {
-    this->rentalDate = rentDate;
-}
-
-int Tool::getRentalDate() {
-    return this->rentalDate;
-}
-
-int Tool::getRentalDuration() {
-    return this->rentalDuration;
-}
-
-void Tool::setRentalDuration(int rentDuration) {
-    this->rentalDuration = rentDuration;
-}
-
-int Tool::getRentalID() {
-    return this->rentalID;
-}
-
-void Tool::setRentalID(int rentID) {
-    this->rentalID = rentID;
 }
 
 string Tool::getToolCategory() {

@@ -12,11 +12,17 @@ class Business: public Customer {
 public:
     Business(string name);
 
+    void setMaxRentalNight();
+
+    void setMinRentalNight();
+
     void setMaxToolCount();
 
     void setMinToolCount();
 
     void setToolCount(int toolCount);
+
+    string getType();
 };
 
 

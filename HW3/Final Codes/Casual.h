@@ -12,11 +12,17 @@ class Casual : public Customer{
 public:
     Casual(string name);
 
+    void setMaxRentalNight();
+
+    void setMinRentalNight();
+
     void setMaxToolCount();
 
     void setMinToolCount();
 
     void setToolCount(int toolCount);
+
+    string getType();
 };
 
 

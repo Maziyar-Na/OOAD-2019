@@ -12,11 +12,17 @@ class Regular: public Customer {
 public:
     Regular(string name);
 
+    void setMaxRentalNight();
+
+    void setMinRentalNight();
+
     void setMaxToolCount();
 
     void setMinToolCount();
 
     void setToolCount(int toolCount);
+
+    string getType();
 };
 
 

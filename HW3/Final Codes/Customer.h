@@ -5,13 +5,12 @@
 #ifndef OOHW3_CUSTOMER_H
 #define OOHW3_CUSTOMER_H
 
-#include <string>
-#include <vector>
+//#include <string>
+//#include <vector>
 #include "Rental.h"
-
-
 using namespace std;
 
+//class Rental;
 class Customer {
 public:
     Customer(string name): name(name), toolCount(0){};
@@ -26,26 +25,34 @@ public:
 
     int getToolCount() const;
 
-    const vector<Rental> getRentalStatus() const;
+    const vector<Rental*> getRentalStatus() const;
 
     void setName(const string name);
 
     void setIsRenting(bool isRenting);
 
-    virtual void setMaxToolCount();
+    virtual void setMaxToolCount() = 0;
 
-    virtual void setMinToolCount();
+    virtual void setMinToolCount() = 0;
 
-    virtual void setToolCount(int toolCount);
+    virtual void setToolCount(int toolCount) = 0;
 
-    void addRental(Rental rent);
+    virtual void setMaxRentalNight() = 0;
+
+    virtual void setMinRentalNight() = 0;
+
+    virtual string getType() = 0 ;
+
+    bool addRental(Rental* rent);
 
 private:
     string name ;
     bool isRenting;
-    vector<Rental> rentalStatus;
+    vector<Rental*> rentalStatus;
 
 protected:
+    int maxRentalNight;
+    int minRentalNight;
     int maxToolCount;
     int minToolCount;
     int toolCount;

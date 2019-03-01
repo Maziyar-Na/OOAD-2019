@@ -6,6 +6,8 @@
 #define HW3OOAD_INVENTORY_H
 
 #include <vector>
+#include "Rental.h"
+
 using namespace std;
 
 class Inventory {
@@ -14,8 +16,8 @@ private:
     int toolsAvailable;
     int toolInventory = 20;
     int outstandingRentals;
-    vector<Rental> rentalList;
-    vector<Tool> toolList;
+    vector<Rental*> rentalList;
+    vector<Tool*> toolList;
 
 public:
     Inventory(int _toolsRented, int _toolsAvailable, int _outstandingRentals);
@@ -23,11 +25,13 @@ public:
     void setToolsRented(int _toolsRented);
     int getOutstandingRentals();
     void setOutstandingRentals(int _outstandingRentals);
-    vector<Rental> getRentalsByDate();
-    vector<Rental> getRentals();
-    void addRental(Rental _rental);
-    void addTool(Tool _tool);
-    vector<Tool> getTools();
+    vector<Rental*> getRentalsByDate();
+    vector<Rental*> getRentals();
+    void addRental(Rental* _rental);
+    void addTools(vector<Tool*> _tools);
+    vector<Tool*> getTools();
+    int getToolsAvailable();
+    void updateRentals(int date);
 };
 
 

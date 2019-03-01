@@ -7,6 +7,9 @@
 
 #include <string>
 #include <vector>
+#include "Tool.h"
+
+class Customer ;
 
 using namespace std ;
 
@@ -14,15 +17,17 @@ class Rental {
 
 public:
 
+    Rental(int startDate, int endDate, Customer* customer, int toolCount, int rentalNights, int rentalID, bool isActive, vector<Tool*>toolList);
+
     void setStartDate(int startDate);
 
     void setEndDate(int endDate);
 
-    void setCustomerName(const string customerName);
+    void setCustomer( Customer* customer);
 
     void setToolCount(int toolCount);
 
-    void setToolList(const vector<Tool> toolList);
+    void setToolList(const vector<Tool*> toolList);
 
     void setRentalNights(int rentalNights);
 
@@ -36,11 +41,11 @@ public:
 
     int getEndDate() const;
 
-    const string getCustomerName() const;
+    Customer* getCustomer() const;
 
     int getToolCount() const;
 
-    const vector<Tool> getToolList() const;
+    const vector<Tool*> getToolList() const;
 
     int getRentalNights() const;
 
@@ -52,18 +57,18 @@ public:
 
     double getTotalRentalFee() const;
 
-    void addTool(Tool temp);
-
-    void deleteTool(Tool temp);
+    void addTool(Tool* temp);
 
     double computeRentalFees();
+
+    void setToolStatus(int i, bool val);
 
 private:
     int startDate;
     int endDate;
-    string customerName;
+    Customer* customer;
     int toolCount;
-    vector<Tool>toolList;
+    vector<Tool*>toolList;
     int rentalNights;
     int rentalID;
     int maxRentalNights = 7;

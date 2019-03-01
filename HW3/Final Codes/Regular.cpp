@@ -5,8 +5,18 @@
 #include "Regular.h"
 
 Regular::Regular(string name) :Customer(name){
+    setMaxRentalNight();
+    setMinRentalNight();
     setMaxToolCount();
     setMinToolCount();
+}
+
+void Regular::setMaxRentalNight(){
+    Customer::maxRentalNight = 5 ;
+}
+
+void Regular::setMinRentalNight(){
+    Customer::minRentalNight = 3 ;
 }
 
 void Regular::setMaxToolCount() {
@@ -19,4 +29,8 @@ void Regular::setMinToolCount() {
 
 void Regular::setToolCount(int toolCount) {
     Customer::toolCount = toolCount;
+}
+
+string Regular::getType(){
+    return "Regular" ;
 }

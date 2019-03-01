@@ -12,10 +12,6 @@ bool Customer::isIsRenting() const {
     return isRenting;
 }
 
-int Customer::getRentalNights() const {
-    return rentalNights;
-}
-
 int Customer::getMaxToolCount() const {
     return maxToolCount;
 }
@@ -28,7 +24,7 @@ int Customer::getToolCount() const {
     return toolCount;
 }
 
-const vector<Rental> Customer::getRentalStatus() const {
+const vector<Rental*> Customer::getRentalStatus() const {
     return rentalStatus;
 }
 
@@ -39,7 +35,13 @@ void Customer::setIsRenting(bool isRenting) {
     Customer::isRenting = isRenting;
 }
 
-void Customer::addRental(Rental rent){
-    if(rent)
-    rentalStatus.push_back(rent)
+bool Customer::addRental(Rental* rent){
+    int t = rent->getToolCount();
+    int n = rent->getRentalNights();
+    if(toolCount + t <= maxToolCount && toolCount + t >= minToolCount && n <= maxRentalNight && n >= minRentalNight) {
+        toolCount += t;
+        rentalStatus.push_back(rent);
+        return true;
+    }
+    return false;
 }
