@@ -8,7 +8,7 @@ private:
 	double price;
 	bool isRented;
 	int rentalDuration;
-	Date rentalDate;
+	int rentalDate;
 	int rentalID;
 	string category;
 
@@ -22,6 +22,10 @@ public:
 	void setPrice(double toolPrice);
 
 	void setRentalStat(bool rentStat);
+	
+	void setRentalDate(int rentDate);
+	
+	int getRentalDate();
 
 	bool getRentalStat();
 
