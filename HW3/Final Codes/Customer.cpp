@@ -35,6 +35,10 @@ void Customer::setIsRenting(bool isRenting) {
     Customer::isRenting = isRenting;
 }
 
+void Customer::setToolCount(int toolCount) {
+    Customer::toolCount = toolCount;
+}
+
 bool Customer::addRental(Rental* rent){
     int t = rent->getToolCount();
     int n = rent->getRentalNights();

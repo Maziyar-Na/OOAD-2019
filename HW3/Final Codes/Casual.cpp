@@ -28,10 +28,6 @@ void Casual::setMinToolCount() {
     Customer::minToolCount = 1;
 }
 
-void Casual::setToolCount(int toolCount) {
-    Customer::toolCount = toolCount;
-}
-
 string Casual::getType(){
     return "Casual" ;
 }

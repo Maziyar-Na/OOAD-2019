@@ -6,7 +6,7 @@
 
 Store::Store(){
     inventory = new Inventory(0 , 20, 0);
-    revenue = 0;
+    revenue = 0.0;
 }
 
 void Store::addCustomers(vector<Customer*> _customers)
@@ -32,7 +32,7 @@ void Store::addRental(Customer* _customer, Rental* _rental)
     }
 
 }
-
+//read available tools to report
 int Store::getAvailableTools()
 {
     return inventory->getToolsAvailable();

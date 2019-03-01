@@ -20,8 +20,6 @@ public:
 
     void setMinToolCount();
 
-    void setToolCount(int toolCount);
-
     string getType();
 };
 

@@ -35,7 +35,7 @@ public:
 
     virtual void setMinToolCount() = 0;
 
-    virtual void setToolCount(int toolCount) = 0;
+    void setToolCount(int toolCount);
 
     virtual void setMaxRentalNight() = 0;
 
@@ -49,13 +49,13 @@ private:
     string name ;
     bool isRenting;
     vector<Rental*> rentalStatus;
+    int toolCount;
 
 protected:
     int maxRentalNight;
     int minRentalNight;
     int maxToolCount;
     int minToolCount;
-    int toolCount;
 };
 
 
