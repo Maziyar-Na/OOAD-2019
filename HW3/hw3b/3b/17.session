@@ -1,11 +1,10 @@
-window_sizes 2748 2065 450 2292 1949 64
+window_sizes 1920 1155 450 1464 1039 64
 cleanlooks_style
 diagrams
   active  classdiagram_ref 128017 // storeTest
-    2093 1933 158 A4 0 0
+    1075 1931 150 B 0 0
 end
 show_stereotypes
-selected operation_ref 150033 // setMaxToolCount
 open
   class_ref 128017 // Rental
   classrelation_ref 145041 // <association>
