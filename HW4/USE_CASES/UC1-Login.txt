@@ -1,0 +1,39 @@
+Scope: Library System
+Level: user goal
+Primary Actor:  Admin
+
+Stakeholders and Interests:
+	     -Admin: Needs to perform admin duties
+	     -Patron:  Needs to search, borrow and return books
+	     -Librarian: Needs to search, catalog books
+	     -Library:  Needs to have book inventory managed
+
+Preconditions: admin has a default password
+
+Success Guarantee (or Postconditions)
+Patrons can search for, borrow and return books
+
+Main Success Secenario
+1. Admin can successfully log in
+2. Admin can add book
+3. Admin can add users
+4. Admin can change password
+5. Librarian can search for books
+6. Librarian can change a books status to Borrowed
+7. Librarian can assign books to Patrons (checkout)
+8. Patrons can search for books
+9. Patrons can borrow Books
+10. Patrons can return Books
+11. Patrons can be charged late fees if books are late
+12. Admin can set latefees
+13. Admin can add catagories 
+
+Extensions:
+
+Special Requirements:
+
+Technology and Data Variations List:
+
+Frequency of Occurrence:
+
+Open Issues:

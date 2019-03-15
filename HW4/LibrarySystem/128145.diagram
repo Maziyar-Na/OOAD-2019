@@ -1,0 +1,62 @@
+format 221
+
+classcanvas 128017 class_ref 128529 // Library
+  classdiagramsettings member_max_width 0 end
+  xyz 472.5 41.5 2000
+end
+classcanvas 128273 class_ref 128657 // Patron
+  classdiagramsettings member_max_width 0 end
+  xyz 71.5 579.5 2000
+end
+classcanvas 128401 class_ref 128785 // Admin
+  classdiagramsettings member_max_width 0 end
+  xyz 457.5 596.5 2000
+end
+classcanvas 128529 class_ref 128913 // Librarian
+  classdiagramsettings member_max_width 0 end
+  xyz 312.5 586.5 2000
+end
+classcanvas 128657 class_ref 129041 // Profile
+  classdiagramsettings member_max_width 0 end
+  xyz 587.5 343.5 2000
+end
+classcanvas 128785 class_ref 129169 // item
+  classdiagramsettings member_max_width 0 end
+  xyz 198.5 137.5 2000
+end
+classcanvas 128913 class_ref 129297 // Calendar
+  classdiagramsettings member_max_width 0 end
+  xyz 699.5 226.5 2000
+end
+classcanvas 129041 class_ref 129425 // Penalty
+  classdiagramsettings member_max_width 0 end
+  xyz 498.5 256.5 2000
+end
+classcanvas 129169 class_ref 129553 // Person
+  classdiagramsettings member_max_width 0 end
+  xyz 291 354 2000
+end
+classcanvas 130449 class_ref 129681 // Inventory
+  classdiagramsettings member_max_width 0 end
+  xyz 477 135 2000
+end
+classcanvas 130577 class_ref 129809 // borrowedItem
+  classdiagramsettings member_max_width 0 end
+  xyz 685 442 2000
+end
+relationcanvas 129553 relation_ref 128145 // <generalisation>
+  from ref 128273 z 2001 to ref 129169
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129681 relation_ref 128273 // <generalisation>
+  from ref 128529 z 2001 to ref 129169
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130321 relation_ref 128401 // <generalisation>
+  from ref 128401 z 2001 to ref 129169
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

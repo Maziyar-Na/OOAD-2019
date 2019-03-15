@@ -1,0 +1,88 @@
+format 221
+
+classcanvas 128145 class_ref 128145 // admin
+  simpleclassdiagramsettings end
+  xyz 785 148 2000
+end
+classcanvas 128273 class_ref 128273 // Patron
+  simpleclassdiagramsettings end
+  xyz 75 238 2000
+end
+classcanvas 128401 class_ref 128401 // Librarian
+  simpleclassdiagramsettings end
+  xyz 805 330 2000
+end
+usecasecanvas 128529 usecase_ref 128017 // Login
+  xyzwh 452 99 3005 64 32 label_xy 472 131
+end
+usecasecanvas 128657 usecase_ref 128145 // Search
+  xyzwh 452 167 3005 64 32 label_xy 469 199
+end
+usecasecanvas 128785 usecase_ref 128273 // Reserve
+  xyzwh 456 268 3005 64 32 label_xy 469 300
+end
+usecasecanvas 128913 usecase_ref 128401 // Borrow
+  xyzwh 454 322 3005 64 32 label_xy 470 354
+end
+usecasecanvas 129041 usecase_ref 128529 // Return
+  xyzwh 453 372 3005 64 32 label_xy 470 404
+end
+usecasecanvas 129169 usecase_ref 128657 // Add/Update/Delete Items
+  xyzwh 455 485 3005 64 32 label_xy 431 517
+end
+usecasecanvas 129297 usecase_ref 128785 // Manage system
+  xyzwh 451 558 3005 64 32 label_xy 438 594
+end
+usecasecanvas 129425 usecase_ref 128913 // Add/Update/Delete Patrons
+  xyzwh 459 644 3005 64 32 label_xy 431 676
+end
+usecasecanvas 129553 usecase_ref 129041 // payFees
+  xyzwh 453 424 3005 64 32 label_xy 466 456
+end
+usecasecanvas 129681 usecase_ref 129169 // review
+  xyzwh 456 220 3010 64 32 label_xy 473 252
+end
+subject 133777 ""
+  xyzwh 409 78 2000 164 637
+line 130833 ----
+  from ref 128273 z 3006 to ref 128529
+line 130961 ----
+  from ref 128273 z 3006 to ref 128657
+line 131089 ----
+  from ref 128273 z 3011 to point 440 236
+  line 134033 z 3011 to ref 129681
+line 131217 ----
+  from ref 128273 z 3006 to ref 128785
+line 131345 ----
+  from ref 128273 z 3006 to ref 128913
+line 131473 ----
+  from ref 128273 z 3006 to ref 129041
+line 131601 ----
+  from ref 128273 z 3006 to ref 129553
+line 131729 ----
+  from ref 128145 z 3006 to ref 128529
+line 131857 ----
+  from ref 128145 z 3006 to ref 128657
+line 131985 ----
+  from ref 128145 z 3011 to ref 129681
+line 132113 ----
+  from ref 128145 z 3006 to ref 129169
+line 132497 ----
+  from ref 128145 z 3006 to ref 129297
+line 132625 ----
+  from ref 128145 z 3006 to ref 129425
+line 132753 ----
+  from ref 128401 z 3006 to ref 128529
+line 132881 ----
+  from ref 128401 z 3006 to ref 128657
+line 133009 ----
+  from ref 128401 z 3011 to ref 129681
+line 133137 ----
+  from ref 128401 z 3006 to ref 128785
+line 133393 ----
+  from ref 128401 z 3006 to ref 128913
+line 133521 ----
+  from ref 128401 z 3006 to ref 129041
+line 133649 ----
+  from ref 128401 z 3006 to ref 129169
+end
