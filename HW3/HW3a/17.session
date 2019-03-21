@@ -1,8 +1,12 @@
 window_sizes 3600 1869 900 2694 1753 64
 cleanlooks_style
+diagrams
+  active  classdiagram_ref 128017 // storeTest
+    2155 1402 100 Letter 0 0
+end
 show_stereotypes
-selected 
-package_ref 129 // HW3a
+selected classdiagram_ref 128017 // storeTest
 open
+  class_ref 128017 // Rental
 end
 end

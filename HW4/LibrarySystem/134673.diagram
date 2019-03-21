@@ -1,0 +1,57 @@
+format 221
+
+classcanvas 128017 class_ref 128785 // Admin
+  simpleclassdiagramsettings end
+  xyz 71.5 319 2000
+end
+usecasecanvas 128145 usecase_ref 135825 // Log In
+  xyzwh 213.5 204.5 3005 64 32 label_xy 232 236
+end
+usecasecanvas 128273 usecase_ref 135953 // Verify Password
+  xyzwh 441 207 3005 64 32 label_xy 439 249
+end
+usecasecanvas 128401 usecase_ref 136081 // Display Error Message
+  xyzwh 437.5 73 3005 64 32 label_xy 420 105
+end
+usecasecanvas 128529 usecase_ref 136209 // Register Patron
+  xyzwh 211 281 3005 64 32 label_xy 208 313
+end
+usecasecanvas 128657 usecase_ref 136337 // Update Patron
+  xyzwh 219 347 3005 64 32 label_xy 219 379
+end
+usecasecanvas 128785 usecase_ref 136465 // Delete Patron
+  xyzwh 221.5 423.5 3005 64 32 label_xy 223 469
+end
+usecasecanvas 129809 usecase_ref 136593 // Check outstanding items and fees
+  xyzwh 447.5 419 3005 64 32 label_xy 405 451
+end
+usecasecanvas 130065 usecase_ref 136721 // Add or remove entitlements
+  xyzwh 449 345 3005 64 32 label_xy 420 377
+end
+usecasecanvas 130833 usecase_ref 138513 // add Entitlements
+  xyzwh 441 279.5 3005 64 32 label_xy 436 312
+end
+simplerelationcanvas 129169 simplerelation_ref 128017
+  from ref 128145 z 3006 stereotype "<<include>>" xyz 331 219.5 3000 to ref 128273
+end
+simplerelationcanvas 129553 simplerelation_ref 128273
+  from ref 128401 z 3006 stereotype "<<extend>>" xyz 328 153.5 3000 to ref 128145
+end
+simplerelationcanvas 129937 simplerelation_ref 128401
+  from ref 128785 z 3006 stereotype "<<include>>" xyz 339 435.5 3000 to ref 129809
+end
+simplerelationcanvas 130193 simplerelation_ref 128529
+  from ref 128657 z 3006 stereotype "<<include>>" xyz 338 360 3000 to ref 130065
+end
+line 130321 ----
+  from ref 128017 z 3006 to ref 128145
+line 130449 ----
+  from ref 128017 z 3006 to ref 128529
+line 130577 ----
+  from ref 128017 z 3006 to ref 128657
+line 130705 ----
+  from ref 128017 z 3006 to ref 128785
+simplerelationcanvas 130961 simplerelation_ref 129809
+  from ref 128529 z 3006 stereotype "<<include>>" xyz 330 295 3000 to ref 130833
+end
+end

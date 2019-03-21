@@ -13,37 +13,40 @@ classcanvas 128401 class_ref 128401 // Librarian
   xyz 805 330 2000
 end
 usecasecanvas 128529 usecase_ref 128017 // Login
-  xyzwh 452 99 3005 64 32 label_xy 472 131
+  xyzwh 452 99 3005 81 33 label_xy 472 131
 end
 usecasecanvas 128657 usecase_ref 128145 // Search
-  xyzwh 452 167 3005 64 32 label_xy 469 199
+  xyzwh 452 167 3005 81 33 label_xy 469 199
 end
 usecasecanvas 128785 usecase_ref 128273 // Reserve
-  xyzwh 456 268 3005 64 32 label_xy 469 300
+  xyzwh 456 268 3005 81 33 label_xy 469 300
 end
 usecasecanvas 128913 usecase_ref 128401 // Borrow
-  xyzwh 454 322 3005 64 32 label_xy 470 354
+  xyzwh 454 322 3005 81 33 label_xy 470 354
 end
 usecasecanvas 129041 usecase_ref 128529 // Return
-  xyzwh 453 372 3005 64 32 label_xy 470 404
+  xyzwh 453 372 3005 81 33 label_xy 470 404
 end
 usecasecanvas 129169 usecase_ref 128657 // Add/Update/Delete Items
-  xyzwh 455 485 3005 64 32 label_xy 431 517
+  xyzwh 460 565 3005 81 33 label_xy 436 597
 end
 usecasecanvas 129297 usecase_ref 128785 // Manage system
-  xyzwh 451 558 3005 64 32 label_xy 438 594
+  xyzwh 449 652 3005 81 33 label_xy 436 688
 end
 usecasecanvas 129425 usecase_ref 128913 // Add/Update/Delete Patrons
-  xyzwh 459 644 3005 64 32 label_xy 431 676
+  xyzwh 463 749 3005 81 33 label_xy 435 781
 end
 usecasecanvas 129553 usecase_ref 129041 // payFees
-  xyzwh 453 424 3005 64 32 label_xy 466 456
+  xyzwh 453 424 3005 81 33 label_xy 466 456
 end
 usecasecanvas 129681 usecase_ref 129169 // review
-  xyzwh 456 220 3010 64 32 label_xy 473 252
+  xyzwh 456 220 3010 81 33 label_xy 473 252
 end
 subject 133777 ""
-  xyzwh 409 78 2000 164 637
+  xyzwh 409 78 2000 185 754
+usecasecanvas 134673 usecase_ref 129297 // collectFee
+  xyzwh 464 493 3011 64 32 label_xy 473 525
+end
 line 130833 ----
   from ref 128273 z 3006 to ref 128529
 line 130961 ----
@@ -65,8 +68,6 @@ line 131857 ----
   from ref 128145 z 3006 to ref 128657
 line 131985 ----
   from ref 128145 z 3011 to ref 129681
-line 132113 ----
-  from ref 128145 z 3006 to ref 129169
 line 132497 ----
   from ref 128145 z 3006 to ref 129297
 line 132625 ----
@@ -85,4 +86,8 @@ line 133521 ----
   from ref 128401 z 3006 to ref 129041
 line 133649 ----
   from ref 128401 z 3006 to ref 129169
+line 134545 ----
+  from ref 128145 z 3006 to ref 128913
+line 134801 ----
+  from ref 128401 z 3012 to ref 134673
 end

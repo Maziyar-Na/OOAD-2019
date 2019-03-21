@@ -1,0 +1,23 @@
+window_sizes 2913 1879 450 2457 1763 64
+cleanlooks_style
+diagrams
+  usecasediagram_ref 128017 // Lib1
+    1585 1344 100 A4 0 0
+  active  classdiagram_ref 128145 // LibC
+    2127 1629 180 B 0 0
+  usecasediagram_ref 134673 // Admin
+    1965 1410 190 A4 0 0
+  usecasediagram_ref 134801 // Librarian
+    1965 1410 129 A4 0 0
+end
+show_stereotypes
+open
+  usecaseview_ref 128017 // Library
+  class_ref 128529 // Library
+  class_ref 128657 // Patron
+  class_ref 129681 // Inventory
+  class_ref 129809 // borrowedItem
+  class_ref 129937 // Employee
+end
+end
+verbose
