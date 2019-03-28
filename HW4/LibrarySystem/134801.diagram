@@ -1,56 +1,56 @@
 format 221
 
 usecasecanvas 129297 usecase_ref 136081 // Display Error Message
-  xyzwh 382.79 52.2 3005 64 32 label_xy 364.5 84
+  xyzwh 381.82 52.38 3005 64 32 label_xy 364.5 84
 end
 usecasecanvas 129425 usecase_ref 135953 // Verify Password
-  xyzwh 386.14 185.5 3005 64 32 label_xy 383.5 228
+  xyzwh 386.38 185 3005 64 32 label_xy 383.5 228
 end
 usecasecanvas 129553 usecase_ref 135825 // Log In
-  xyzwh 158.99 183.15 3005 64 32 label_xy 176.5 215
+  xyzwh 158.46 182.72 3005 64 32 label_xy 176.5 215
 end
 usecasecanvas 130065 usecase_ref 136849 // Search     
-  xyzwh 163 283 3005 64 32 label_xy 172 315
+  xyzwh 163.16 282.72 3005 64 32 label_xy 172 315
 end
 usecasecanvas 130193 usecase_ref 136977 // reserve
-  xyzwh 164 352 3005 64 32 label_xy 179 384
+  xyzwh 164.3 352.38 3005 64 32 label_xy 179 384
 end
 usecasecanvas 130577 usecase_ref 137361 // Borrow    
-  xyzwh 169 432 3005 64 32 label_xy 178 463
+  xyzwh 169 431.58 3005 64 32 label_xy 178 463
 end
 usecasecanvas 130705 usecase_ref 137489 // Return     
-  xyzwh 176 500 3005 64 32 label_xy 186 532
+  xyzwh 175.98 500.1 3005 64 32 label_xy 186 532
 end
 usecasecanvas 130833 usecase_ref 137617 // Add Item(s)
-  xyzwh 177 561 3005 64 32 label_xy 182 593
+  xyzwh 177.12 560.64 3005 64 32 label_xy 182 593
 end
 usecasecanvas 130961 usecase_ref 137745 // Update Item(s)
-  xyzwh 187 621 3005 64 32 label_xy 186 653
+  xyzwh 186.52 621.04 3005 64 32 label_xy 186 653
 end
 usecasecanvas 131089 usecase_ref 137873 // Delete Item(s)
-  xyzwh 190 692 3005 64 32 label_xy 189 724
+  xyzwh 189.94 691.98 3005 64 32 label_xy 189 724
 end
 usecasecanvas 131217 usecase_ref 138001 // Collect Fee(s)
-  xyzwh 191 771 3005 64 32 label_xy 191 803
+  xyzwh 191.08 771.04 3005 64 32 label_xy 191 803
 end
 usecasecanvas 131345 usecase_ref 138129 // Check Database
-  xyzwh 385 285 3005 64 32 label_xy 380 317
+  xyzwh 385.24 285 3005 64 32 label_xy 380 317
 end
 usecasecanvas 131601 usecase_ref 138257 // Update Database
-  xyzwh 438 523 3005 64 32 label_xy 431 555
+  xyzwh 437.66 523.32 3005 64 32 label_xy 431 555
 end
 usecasecanvas 132753 usecase_ref 138385 // Add fee to account
-  xyzwh 416 773 3005 64 32 label_xy 406 805
+  xyzwh 415.58 773.32 3005 64 32 label_xy 406 805
 end
 classcanvas 133905 class_ref 128913 // Librarian
   simpleclassdiagramsettings end
-  xyz 20 436 2000
+  xyz 20.69 436.95 2000
 end
 simplerelationcanvas 129681 simplerelation_ref 128017
-  from ref 129553 z 3006 stereotype "<<include>>" xyz 275.5 198 3000 to ref 129425
+  from ref 129553 z 3006 stereotype "<<include>>" xyz 275 198 3000 to ref 129425
 end
 simplerelationcanvas 129809 simplerelation_ref 128273
-  from ref 129297 z 3006 stereotype "<<extend>>" xyz 272.5 132 3000 to ref 129553
+  from ref 129297 z 3006 stereotype "<<extend>>" xyz 272 132 3000 to ref 129553
 end
 simplerelationcanvas 129937 simplerelation_ref 128145
   from ref 129297 z 3006 to ref 129553
@@ -62,22 +62,22 @@ simplerelationcanvas 131729 simplerelation_ref 128785
   from ref 130193 z 3006 stereotype "<<include>>" xyz 305 453 3000 to ref 131601
 end
 simplerelationcanvas 131857 simplerelation_ref 128913
-  from ref 130577 z 3006 stereotype "<<include>>" xyz 307 491.5 3000 to ref 131601
+  from ref 130577 z 3006 stereotype "<<include>>" xyz 307 491 3000 to ref 131601
 end
 simplerelationcanvas 131985 simplerelation_ref 129041
-  from ref 130705 z 3006 stereotype "<<include>>" xyz 310 525.5 3000 to ref 131601
+  from ref 130705 z 3006 stereotype "<<include>>" xyz 310 525 3000 to ref 131601
 end
 simplerelationcanvas 132113 simplerelation_ref 129169
-  from ref 130833 z 3006 stereotype "<<include>>" xyz 311 556.5 3000 to ref 131601
+  from ref 130833 z 3006 stereotype "<<include>>" xyz 311 556 3000 to ref 131601
 end
 simplerelationcanvas 132497 simplerelation_ref 129425
   from ref 131089 z 3006 stereotype "<<include>>" xyz 316 622 3000 to ref 131601
 end
 simplerelationcanvas 132881 simplerelation_ref 129553
-  from ref 131217 z 3006 stereotype "<<include>>" xyz 306 787.5 3000 to ref 132753
+  from ref 131217 z 3006 stereotype "<<include>>" xyz 306 787 3000 to ref 132753
 end
 simplerelationcanvas 133393 simplerelation_ref 129681
-  from ref 130961 z 3006 stereotype "<<include>>" xyz 316.5 586 3000 to ref 131601
+  from ref 130961 z 3006 stereotype "<<include>>" xyz 316 586 3000 to ref 131601
 end
 line 134033 ----
   from ref 133905 z 3006 to ref 129553

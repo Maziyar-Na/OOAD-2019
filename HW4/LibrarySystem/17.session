@@ -1,23 +1,37 @@
-window_sizes 2913 1879 450 2457 1763 64
+window_sizes 1920 1155 450 1464 1039 64
 cleanlooks_style
 diagrams
   usecasediagram_ref 128017 // Lib1
     1585 1344 100 A4 0 0
   active  classdiagram_ref 128145 // LibC
-    2127 1629 180 B 0 0
+    2690 1629 70 D 0 0
   usecasediagram_ref 134673 // Admin
     1965 1410 190 A4 0 0
   usecasediagram_ref 134801 // Librarian
-    1965 1410 129 A4 0 0
+    1965 1410 169 A4 120 0
 end
 show_stereotypes
 open
   usecaseview_ref 128017 // Library
   class_ref 128529 // Library
   class_ref 128657 // Patron
+  class_ref 129041 // PatronProfile
+  class_ref 129169 // Item
+  class_ref 129553 // Person
   class_ref 129681 // Inventory
   class_ref 129809 // borrowedItem
-  class_ref 129937 // Employee
+  class_ref 143505 // ItemFactory
+  class_ref 143633 // ItemType
+  class_ref 143889 // PersonFactory
+  class_ref 144017 // PersonType
+  class_ref 144273 // Audio_Program
+  class_ref 144401 // sort
+  class_ref 144529 // NameSort
+  class_ref 144657 // AuthorSort
+  class_ref 144785 // DateSort
+  class_ref 144913 // SortAction
+  class_ref 145041 // PersonDao
+  class_ref 145169 // InventoryDao
 end
 end
 verbose
