@@ -1470,6 +1470,15 @@ ${docstring}${body}
 "
 	
       end
+
+      classrelation 150673 // <dependency>
+	relation 147345 -_->
+	  a public
+	    cpp default "#include in source"
+	    python "${type}"
+	    classrelation_ref 150673 // <dependency>
+	  b parent class_ref 128785 // Admin
+      end
     end
 
     class 128785 "Admin"
@@ -1579,6 +1588,15 @@ ${docstring}${body}
 	    python "${type}"
 	    classrelation_ref 128785 // <generalisation>
 	  b parent class_ref 129937 // Employee
+      end
+
+      classrelation 150801 // <dependency>
+	relation 147473 -_->
+	  a public
+	    cpp default "#include in source"
+	    python "${type}"
+	    classrelation_ref 150801 // <dependency>
+	  b parent class_ref 128657 // Patron
       end
     end
 

@@ -3,9 +3,8 @@ package edu.cuboulder;
 import java.util.List;
 
 public class Patron extends Person {
-    private double outStandingFees;
+    private Double outStandingFees;
     List<BorrowedItem> borrowedItems;
-
 
     @Override
     public String toString() {
@@ -22,7 +21,7 @@ public class Patron extends Person {
         return super.equals(obj);
     }
 
-    public double getOutStandingFees() {
+    public Double getOutStandingFees() {
         return outStandingFees;
     }
 
@@ -34,7 +33,7 @@ public class Patron extends Person {
         this.borrowedItems = borrowedItems;
     }
 
-    public void setOutStandingFees(double outStandingFees) {
+    public void setOutStandingFees(Double outStandingFees) {
         this.outStandingFees = outStandingFees;
     }
 
@@ -46,5 +45,11 @@ public class Patron extends Person {
     public int setProfile(){
         System.out.println("Plaeholder for setProfile");
         return 0;
+    }
+    public Patron(){
+        outStandingFees = 0.0;
+        borrowedItems = null;
+        setType(PersonType.PATRON);
+        setItem(null);
     }
 }
