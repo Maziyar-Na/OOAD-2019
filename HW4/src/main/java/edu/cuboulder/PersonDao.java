@@ -1,9 +1,7 @@
 package edu.cuboulder;
-
 import java.sql.Connection;
 import java.util.List;
-
-public class InventoryDao {
+public class PersonDao {
 
     private String jdbcHost = null;
     private String dbName = null;
@@ -16,7 +14,7 @@ public class InventoryDao {
     private ConnectionDao connectionDao;
 
 
-    public InventoryDao(String jdbcHost, String dbName, String userName, String password) {
+    public PersonDao(String jdbcHost, String dbName, String userName, String password) {
         this.jdbcHost = jdbcHost;
         this.dbName = dbName;
         this.userName = userName;
@@ -36,38 +34,31 @@ public class InventoryDao {
 
     }
 
-    public Integer addItem(Item item) {
-        System.out.println("Placeholder for addItem\n");
+
+    public Integer savePeople(List<Person> people){
+        System.out.println("Placeholder for SavePeople\n");
         return -1;
     }
 
-
-    public Integer deleteItem(Integer id) {
-        System.out.println("PlaceHolder for deleteItem\n");
-        return -1;
-    }
-
-    public Integer saveItem(Item item) {
-        System.out.println("Placeholder for saveItem\n");
-        return -1;
-    }
-
-    public Item searchItem(String criteria) {
-        System.out.println("PlaceHolder for searchItem");
+    public List<Person>  loadPeople(){
+        System.out.println("Placeholder for loadPeople\n");
         return null;
     }
 
+    public Integer savePerson(Person person){
+        System.out.println("Placeholder for savePerson");
+        return -1;
+    }
 
-    public List<Item> searchItems(String criteria) {
-        System.out.println("Placeholder for searchItems");
+    public Integer deletePerson(Integer id){
+        System.out.println("Placeholder for deletePerson");
+        return -1;
+    }
+
+    public Person loadPerson(String name, String password){
+        System.out.println("Placeholder for loadPerson\n");
         return null;
     }
 
 
 }
-
-
-
-
-
-

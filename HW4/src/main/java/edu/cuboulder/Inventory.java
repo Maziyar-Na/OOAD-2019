@@ -24,7 +24,7 @@ public class Inventory {
         return -1;
     }
 
-    public List<Item> getItems(List<String>){
+    public List<Item> getItems(List<String> criteria ){
         System.out.println("GetItems Placeholder\n");
         return null;
     }
