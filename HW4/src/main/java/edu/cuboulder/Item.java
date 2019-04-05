@@ -1,6 +1,6 @@
 package edu.cuboulder;
 
-public abstract class Item {
+public abstract class Item implements ItemInterFace{
     private String title;
     private String subject;
     private Integer id;

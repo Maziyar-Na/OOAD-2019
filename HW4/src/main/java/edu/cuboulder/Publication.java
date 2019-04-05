@@ -123,6 +123,10 @@ public class Publication extends Item {
     public void setUrl(String url) {
         this.url = url;
     }
+    public void showInfo(){
+        System.out.println("showInfo place holder");
+
+    }
 
 
 }

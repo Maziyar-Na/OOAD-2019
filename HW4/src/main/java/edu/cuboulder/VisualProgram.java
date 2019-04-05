@@ -68,4 +68,8 @@ public class VisualProgram extends Item {
         this.star = star;
     }
 
+    public void showInfo(){
+        System.out.println("showInfo place holder");
+
+    }
 }

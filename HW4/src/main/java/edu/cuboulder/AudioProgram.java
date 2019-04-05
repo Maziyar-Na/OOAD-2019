@@ -49,6 +49,11 @@ public class AudioProgram extends  Item {
         this.songs = songs;
     }
 
+    public void showInfo(){
+        System.out.println("showInfo place holder");
+
+    }
+
 
 
 
