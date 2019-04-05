@@ -29,8 +29,10 @@ public class Inventory {
         return null;
     }
 
-    public List<Item> sort(){
-        System.out.println("Placeholder for sort");
+    public List<Item> sort(List<Item> items, SortType sortType){
+        SortInterface sortInterface = SortFactory.getSortAction(sortType);
+        System.out.println("Placeholder for sort: " + sortInterface);
         return null;
     }
+
 }
