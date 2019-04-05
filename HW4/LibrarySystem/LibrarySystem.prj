@@ -1292,7 +1292,7 @@ ${docstring}${body}
       end
 
       operation 156689 "modify_person"
-	public explicit_return_type ""
+	public return_type class_ref 129553 // Person
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
@@ -1367,6 +1367,25 @@ ${docstring}${body}
 	    python "${comment}${self}${name} = ${value}
 "
 	    classrelation_ref 143505 // <aggregation>
+      end
+
+      operation 166545 "getUsers"
+	stereotype "List"
+	public return_type class_ref 129553 // Person
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
       end
     end
 
@@ -2807,6 +2826,7 @@ ${docstring}${body}
       end
 
       operation 156433 "get_borrowed_items"
+	stereotype "list"
 	public return_type class_ref 129169 // Item
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
@@ -5844,6 +5864,7 @@ ${docstring}${body}
 "
 	
       end
+
     end
 
     class 145169 "InventoryDao"
