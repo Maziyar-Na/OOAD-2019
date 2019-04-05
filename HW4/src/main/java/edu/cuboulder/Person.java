@@ -2,7 +2,7 @@ package edu.cuboulder;
 
 import java.util.List;
 
-public abstract class Person {
+public abstract class Person implements PersonInterface{
     private String name;
     private Integer id;
     private String password;

@@ -52,4 +52,9 @@ public class Patron extends Person {
         setType(PersonType.PATRON);
         setItem(null);
     }
+
+    public void showState(){
+        System.out.println("ShowStatePlaceHolder");
+    }
+
 }

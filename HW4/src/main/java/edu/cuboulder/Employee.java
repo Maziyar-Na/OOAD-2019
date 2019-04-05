@@ -16,4 +16,8 @@ public class Employee extends Person{
         System.out.println("Placeholder for addItem");
         return 0;
     }
+
+    public void showState() {
+        System.out.println("Placeholder for showState");
+    }
 }
