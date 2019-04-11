@@ -2,162 +2,150 @@ format 221
 
 classcanvas 128017 class_ref 128529 // Library
   classdiagramsettings member_max_width 0 end
-  xyz 719.77 309.78 2000
+  xyz 589.77 172.22 2000
 end
 classcanvas 128273 class_ref 128657 // Patron
   classdiagramsettings member_max_width 0 end
-  xyz 468.11 1002.41 2000
+  xyz 1222.73 929.87 2000
 end
 classcanvas 128401 class_ref 128785 // Admin
   classdiagramsettings member_max_width 0 end
-  xyz 154.68 1164.66 2000
+  xyz 962.57 1078.33 2000
 end
 classcanvas 128529 class_ref 128913 // Librarian
   classdiagramsettings member_max_width 0 end
-  xyz 40.94 1163.79 2000
+  xyz 1098.43 1077.16 2000
 end
 classcanvas 128785 class_ref 129169 // Item
   classdiagramsettings member_max_width 0 end
-  xyz 1536.45 564.98 2000
+  xyz 351.5 552.02 2000
 end
 classcanvas 129169 class_ref 129553 // Person
   classdiagramsettings member_max_width 0 end
-  xyz 472.11 564.98 2000
+  xyz 1217.92 480.02 2000
 end
 classcanvas 130449 class_ref 129681 // Inventory
   classdiagramsettings member_max_width 0 end
-  xyzwh 1226.35 333.78 2000 269 107
+  xyzwh 578.96 368.78 2000 269 107
 end
 classcanvas 130577 class_ref 129809 // borrowedItem
   classdiagramsettings member_max_width 0 end
-  xyz 241.73 958.18 2000
+  xyz 1462.16 881.87 2000
 end
 classcanvas 130833 class_ref 129937 // Employee
   classdiagramsettings member_max_width 0 end
-  xyzwh 155.91 855.26 2000 85 65
+  xyzwh 1094.43 930.06 2000 85 65
 end
 classcanvas 132497 class_ref 130065 // Publication
   classdiagramsettings member_max_width 0 end
-  xyzwh 1805.44 41.68 2000 228 491
+  xyzwh 41.32 414.02 2000 228 491
 end
 classcanvas 135057 class_ref 143505 // ItemFactory
   classdiagramsettings member_max_width 0 end
-  xyz 1536.68 370.55 2000
+  xyz 355.5 401.78 2000
 end
 classcanvas 135185 class_ref 143633 // ItemType
   classdiagramsettings member_max_width 0 end
-  xyz 1551.45 816.54 2000
+  xyz 368.31 807.82 2000
 end
 classcanvas 137745 class_ref 143761 // Visual_Program
   classdiagramsettings member_max_width 0 end
-  xyz 1803.03 809.1 2000
+  xyz 93.73 946.06 2000
 end
 classcanvas 138641 class_ref 143889 // PersonFactory
   classdiagramsettings member_max_width 0 end
-  xyz 459.11 370.55 2000
+  xyz 1213.73 229.22 2000
 end
 classcanvas 140689 class_ref 144273 // Audio_Program
   classdiagramsettings member_max_width 0 end
-  xyz 1805.11 570.98 2000
+  xyz 65.06 168.32 2000
 end
 classcanvas 141841 class_ref 144401 // sort
   classdiagramsettings member_max_width 0 end
-  xyz 1188.84 486.19 2000
+  xyz 888.84 483.94 2000
 end
 classcanvas 141969 class_ref 144529 // NameSort
   classdiagramsettings member_max_width 0 end
-  xyz 1026.69 593.39 2000
+  xyz 1061.14 401.78 2000
 end
 classcanvas 143633 class_ref 144657 // AuthorSort
   classdiagramsettings member_max_width 0 end
-  xyz 1334.53 593.39 2000
+  xyz 1061.14 483.94 2000
 end
 classcanvas 144017 class_ref 144785 // DateSort
   classdiagramsettings member_max_width 0 end
-  xyz 1180.61 593.39 2000
+  xyz 1061.14 565.1 2000
 end
 classcanvas 144785 class_ref 144913 // SortAction
   classdiagramsettings member_max_width 0 end
-  xyz 1309.35 485.19 2000
+  xyz 892.65 401.78 2000
 end
 classcanvas 145425 class_ref 145041 // PersonDao
   classdiagramsettings member_max_width 0 end
-  xyz 702.77 504.24 2000
+  xyz 570.96 41.9 2000
 end
 classcanvas 145681 class_ref 145169 // InventoryDao
   classdiagramsettings member_max_width 0 end
-  xyz 1286.12 194.17 2000
+  xyz 634.96 516.93 2000
 end
 classcanvas 146449 class_ref 144017 // PersonType
   classdiagramsettings member_max_width 0 end
-  xyz 309.68 639.98 2000
+  xyz 1462.32 627.02 2000
 end
 relationcanvas 129553 relation_ref 128145 // <generalisation>
-  decenter_begin 517
-  decenter_end 518
   from ref 128273 z 2001 to ref 129169
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 130961 relation_ref 128529 // <generalisation>
   geometry VHV unfixed
-  decenter_begin 552
-  decenter_end 518
-  from ref 130833 z 2001 to point 199 818.6
-  line 147857 z 2001 to point 568 818.6
+  from ref 130833 z 2001 to point 1134.68 888.4
+  line 147857 z 2001 to point 1317.72 888.4
   line 147985 z 2001 to ref 129169
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131089 relation_ref 128657 // <generalisation>
-  geometry VHV unfixed
-  decenter_end 552
-  from ref 128529 z 2001 to point 75 1126.44
-  line 148113 z 2001 to point 199 1126.44
-  line 148241 z 2001 to ref 130833
+  from ref 128529 z 2001 to ref 130833
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131217 relation_ref 128785 // <generalisation>
-  decenter_end 552
-  from ref 128401 z 2001 to ref 130833
+  geometry VHV unfixed
+  from ref 128401 z 2001 to point 1007.92 1036.44
+  line 149393 z 2001 to point 1134.68 1036.44
+  line 149521 z 2001 to ref 130833
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131857 relation_ref 128913 // <association>
-  decenter_end 549
   from ref 130577 z 2001 to ref 128273
   no_role_a no_role_b
-  multiplicity_a_pos 451 1045 3000 multiplicity_b_pos 441 1044 3000
+  multiplicity_a_pos 1430 972 3000 multiplicity_b_pos 1436 969 3000
 end
 relationcanvas 134161 relation_ref 136337 // <aggregation>
   from ref 128017 z 2001 to ref 130449
   no_role_a no_role_b
-  multiplicity_a_pos 1200 391 3000 multiplicity_b_pos 979 391 3000
+  multiplicity_a_pos 687 354 3000 multiplicity_b_pos 697 331 3000
 end
 relationcanvas 135441 relation_ref 136593 // <unidirectional association>
-  decenter_begin 476
-  decenter_end 471
   from ref 128785 z 2001 to ref 135185
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 135569 relation_ref 136721 // <dependency>
-  decenter_begin 476
   from ref 128785 z 2001 to ref 135057
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 135953 relation_ref 136849 // <generalisation>
-  from ref 132497 z 2001 to point 1765.66 286.24
-  line 148369 z 2001 to point 1765.66 671.54
-  line 148497 z 2001 to ref 128785
+  from ref 132497 z 2001 to ref 128785
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 138257 relation_ref 137361 // <generalisation>
-  from ref 137745 z 2001 to point 1765.66 941.14
-  line 141073 z 2001 to point 1765.66 671.54
+  from ref 137745 z 2001 to point 311.26 1076.42
+  line 141073 z 2001 to point 311.26 659.26
   line 141201 z 2001 to ref 128785
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -168,70 +156,57 @@ relationcanvas 140049 relation_ref 138129 // <aggregation>
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 140305 relation_ref 138257 // <dependency>
-  decenter_begin 518
-  decenter_end 516
   from ref 129169 z 2001 to ref 138641
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 140945 relation_ref 138641 // <generalisation>
-  from ref 140689 z 2001 to ref 128785
+  from ref 140689 z 2001 to point 311.44 270.36
+  line 148881 z 2001 to point 311.44 659.68
+  line 149009 z 2001 to ref 128785
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 141713 relation_ref 139025 // <aggregation>
-  decenter_end 414
   from ref 130449 z 2001 to ref 135057
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 143505 relation_ref 139409 // <generalisation>
-  geometry VHV unfixed
-  decenter_begin 469
-  from ref 141969 z 2001 to point 1077 556.24
-  line 147601 z 2001 to point 1225 556.24
+  from ref 141969 z 2001 to point 1020.36 421.92
+  line 147601 z 2001 to point 1020.36 503.08
   line 147729 z 2001 to ref 141841
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 143889 relation_ref 139665 // <generalisation>
-  geometry VHV unfixed
-  decenter_begin 469
-  from ref 143633 z 2001 to point 1385 556.84
-  line 148625 z 2001 to point 1230 556.84
-  line 148753 z 2001 to ref 141841
+  from ref 143633 z 2001 to ref 141841
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 144145 relation_ref 139793 // <generalisation>
-  decenter_begin 469
-  from ref 144017 z 2001 to ref 141841
+  from ref 144017 z 2001 to point 1020.36 585.56
+  line 149137 z 2001 to point 1020.36 503.4
+  line 149265 z 2001 to ref 141841
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 145041 relation_ref 140049 // <aggregation>
-  decenter_begin 585
-  decenter_end 585
   from ref 144785 z 2001 to ref 141841
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 145169 relation_ref 140177 // <dependency>
-  decenter_begin 513
-  decenter_end 517
   from ref 130449 z 2001 to ref 144785
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 145937 relation_ref 140305 // <aggregation>
-  decenter_begin 486
-  decenter_end 487
   from ref 128017 z 2001 to ref 145425
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 146193 relation_ref 140561 // <aggregation>
-  decenter_begin 513
   from ref 130449 z 2001 to ref 145681
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
