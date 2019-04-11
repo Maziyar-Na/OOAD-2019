@@ -11,7 +11,7 @@ diagrams
     1965 1410 169 A4 120 0
 end
 show_stereotypes
-selected operation_ref 157073 // login
+selected operation_ref 166545 // getUsers
 open
   usecaseview_ref 128017 // Library
   class_ref 128529 // Library
@@ -25,7 +25,7 @@ open
   class_ref 143633 // ItemType
   class_ref 143889 // PersonFactory
   class_ref 144017 // PersonType
-  class_ref 144273 // Audio_Program
+  classrelation_ref 140817 // <generalisation>
   class_ref 144401 // sort
   class_ref 144529 // NameSort
   class_ref 144657 // AuthorSort
