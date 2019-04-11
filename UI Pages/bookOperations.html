@@ -9,13 +9,37 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style>
 
-  .login_botton{
-    width: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%
+  <style>
+  .btn-group button {
+    background-color: #8B008B; /* purple background */
+    border: 1px solid purple; /* purple border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
   }
+
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #4B0082;
+  }
+    
+  .app_top {
+    display: table-cell;
+  }
+
   .col-center{
     float: none;
     margin: 0 auto;
@@ -60,29 +84,27 @@
 <div class="container" style="margin-top:15px">
   <div class="row text-center">
     <div class="col-sm-6 col-center">
-      <h2>Welcome To Registering Patrons</h2>
-      <h6>Enter your information here:</h5>
+
+      <div class="btn-group">
+      <button>Add Book</button>
+      <button>Edit Book</button>
+      <button>Delete book</button>
+      <button>Search Book by Name</button>
+      <button>Search Book by ISBN</button>
+    </div> 
+
+      <h2>Welcome to add/edit/delete Book</h2>
       <div class="fakeimg text-left">
-        <input type="firstName" class="form-control" placeholder="First name">
-        <input type="lastName" class="form-control" placeholder="Last name">
-        <input type="id" class="form-control" placeholder="ID">
-        <label for="party">DOB</label>
-          <input type="date" id="start" name="DOB:"
-             value="2010-01-01"
-             min="1950-01-01" max="2019-04-10"> <br>
-          <label for="party">Gender:</label>
-        <input type="radio" name="gender" value="male" checked> Male
-    <input type="radio" name="gender" value="female"> Female<br>
-          <label for="party">Patron type: </label>
-        <input type="radio" name="type" value="Regular" checked> Regular
-    <input type="radio" name="type" value="Premium"> Premium<br>
-        <input type="email" class="form-control" placeholder="Email">
-        <input type="phoneNumber" class="form-control" placeholder="Phone number">         
+        <input type="bookName" class="form-control" placeholder="Book name">
+        <input type="authorName" class="form-control" placeholder="Author name">
+        <input type="isbn" class="form-control" placeholder="ISBN">
+        <input type="otherInfo" class="form-control" placeholder="Other info">         
       </div>
       
       <div>
-      <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="Button1" value="Register" id="Button1" class="btn btn-dark register_botton"></div>     
-      <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="Button2" value="Cancel" id="Button2" class="btn btn-dark cancel_botton"></div>
+      <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="Button1" value="Add Book" id="Button1" class="btn btn-dark register_botton"></div>     
+      <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="Button2" value="Edit Book" id="Button2" class="btn btn-dark cancel_botton"></div>
+      <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;"><input type="submit" name="Button3" value="Delete Book" id="Button3" class="btn btn-dark cancel_botton"></div>
       </div>
           
     </div>
