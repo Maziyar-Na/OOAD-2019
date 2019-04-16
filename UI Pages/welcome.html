@@ -15,34 +15,7 @@
   float: right;
   }
 
-  .btn-group button {
-    background-color: #8B008B; /* purple background */
-    border: 1px solid purple; /* purple border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-  }
 
-  .btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
-
-  /* Clear floats (clearfix hack) */
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  /* Add a background color on hover */
-  .btn-group button:hover {
-    background-color: #4B0082;
-  }
-    
-  .app_top {
-    display: table-cell;
-  }
     
   .col-center{
     float: none;
@@ -89,15 +62,7 @@
 <div class="container" style="margin-top:15px">
   <div class="row text-center">
     <div class="col-sm-6 col-center">
-      
-      <div class="btn-group">
-      <button>Add Book</button>
-      <button>Edit Book</button>
-    <button>Delete Book</button>
-        <button>Search Book by Name</button>
-      <button>Search Book by ISBN</button>
-    </div>    
-   
+
     <p>
           <h2>Welcome</h2>
           A library system providing users and administrators with the necessary functionality to borrow and manage a non trivial universe of materials that would be borrowed in a contemporary library.
