@@ -12,8 +12,10 @@ public class ItemDaoTest {
     private Publication pub;
     private String BN = "DUNE";
     private Integer ID = 999912345;
-    private String ISBN ="1234567890";
+    private String ISBN    = "1234567890";
+    private String NEWISBN = "1231567890";
     private Integer AV = 1;
+    private Integer NAV = 0;
     private  ItemType IT = ItemType.PUBLICATION;
     private String AUTH ="Frank Herbert";
 
@@ -71,8 +73,30 @@ public class ItemDaoTest {
         Assert.assertEquals(rc.intValue(), 0);
         rc = id.close();
         Assert.assertEquals(rc.intValue(), 0);
+    }
+
+    @Test
+    public void updateItem(){
+        Integer rc;
+        Item retItem;
+        InventoryDao id = new InventoryDao();
+        rc = id.connect();
+        Assert.assertEquals(rc.intValue(), 0);
+        rc = id.addItem(pub);
+        pub.setIsbn_num(NEWISBN);
+        pub.setAvailable(0);
+        rc = id.saveItem(pub);
+        String qry = "Select * from book where id = " + ID;
+        retItem = id.searchItem(qry);
+        Assert.assertEquals(retItem.getIsbn_num(),NEWISBN);
+        Assert.assertEquals(retItem.getAvailable(),NAV);
+        rc = id.deleteItem(pub.getId());
+        Assert.assertEquals(rc.intValue(), 0);
+        rc = id.close();
+        Assert.assertEquals(rc.intValue(), 0);
 
 
     }
+
 
 }
