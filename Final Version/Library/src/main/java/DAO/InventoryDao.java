@@ -36,13 +36,42 @@ public class InventoryDao {
 
     public Integer addItem(Item item) {
         System.out.println("Placeholder for addItem\n");
-        return -1;
+        if (this.connect() == 0) {
+            try {
+                connectionDao.execute_other_query("INSERT INTO Book (book_name, author, isbn_num, date, type, available)" +
+                        "VALUES ('" + item.getBook_name() + "', '" + item.getAuthor() + "', '" + item.getIsbn_num() +"', '"+item.getDate() +"','"+item.getType().toInteger()+"',"
+                        + item.getAvailable() +")");
+                System.out.println("[dbg]Item has been added\n");
+                return 0;
+            } catch (SQLException e) {
+                System.out.println("SQL Exception in insert");
+                e.printStackTrace();
+                return -1;
+            }
+        }
+        else {
+            return -1;
+        }
     }
 
+    public Integer deleteItem(Item item) {
+        System.out.println("Placeholder for addItem\n");
+        if (this.connect() == 0) {
+            try {
+                connectionDao.execute_other_query("DELETE FROM Book WHERE book_name = '" + item.getBook_name() +
+                        "' AND author = '" + item.getAuthor() + "' AND isbn_num = '" + item.getIsbn_num() + "' AND date = '"+item.getDate() +"';");
+                System.out.println("[dbg]Item has been deleted!\n");
+                return 0;
+            } catch (SQLException e) {
+                System.out.println("SQL Exception in insert");
+                e.printStackTrace();
+                return -1;
+            }
+        }
+        else {
+            return -1;
+        }
 
-    public Integer deleteItem(Integer id) {
-        System.out.println("PlaceHolder for deleteItem\n");
-        return -1;
     }
 
     public Integer saveItem(Item item) {

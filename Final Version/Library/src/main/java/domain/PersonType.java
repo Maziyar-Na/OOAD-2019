@@ -4,7 +4,7 @@ public enum PersonType {
     PATRON,
     ADMIN,
     LIBRIAN;
-    public static PersonType fromInteger(int x) {
+    public static PersonType fromInteger(Integer x) {
         switch(x) {
             case 1:
                 return PATRON;

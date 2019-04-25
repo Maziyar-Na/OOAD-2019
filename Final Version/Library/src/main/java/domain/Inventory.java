@@ -20,8 +20,8 @@ public class Inventory {
         return instance;
     }
     public Integer addItem(Item item){
-        items.add(item);
-        return 0;
+        InventoryDao idao = new InventoryDao();
+        return idao.addItem(item);
     }
 
     public Item getItem(String criteria){
@@ -33,14 +33,15 @@ public class Inventory {
         System.out.println("Placeholder for getBorrowed Items\n");
         return null;
     }
-    public Integer delteItem(Integer id){
+    public Integer deleteItem(Item item){
         System.out.println("Placeholder for deleteItem\n");
-        return -1;
+        InventoryDao idao = new InventoryDao();
+        return idao.deleteItem(item);
     }
 
     public List<Item> convert_BookVO_to_Item(List<BookVO>bvos){
         for (BookVO E:bvos) {
-            this.addItem(ItemFactory.makeItem(E));
+            items.add(ItemFactory.makeItem(E));
         }
         return items;
     }

@@ -34,6 +34,16 @@
                 controller  : 'returnController'
             })
 
+            .when('/bookops', {
+                templateUrl : 'bookOperations.html',
+                controller  : 'bookOperationController'
+            })
+
+            .when('/reg', {
+                templateUrl : 'register.html',
+                controller  : 'userController'
+            });
+
         // use the HTML5 History API
         //$locationProvider.html5Mode(true);
     });
@@ -283,5 +293,98 @@
             };
         }
     );
+
+    app.controller("bookOperationController", function($scope, $http, $cookies, sharedList, $location){
+        localRef = this;
+        this.bookInfo={};
+        console.log(this.bookInfo);
+
+        this.marshal = function(bookInfo) {
+            return {
+                book_name: bookInfo.book_name,
+                author: bookInfo.author,
+                isbn_num: bookInfo.isbn_num,
+                since_date:bookInfo.since_date,
+                type: bookInfo.type,
+                available: bookInfo.available
+            };
+        };
+
+        this.addBook = function(){
+            //alert("we are here!");
+            console.log(this.bookInfo);
+            $http.post('http://localhost:8080/GLibrary/library/bookmanagement/add' ,
+                this.marshal(this.bookInfo)).then(
+                function(response) {
+                    console.log(response.data);
+                    if(response.data == true)
+                        alert("The book is successfully added!");
+                    else {
+                        alert("Try Again!");
+                    }
+                }
+            );
+        };
+
+        this.deleteBook = function(){
+            //alert("we are here!");
+            console.log(this.bookInfo);
+            $http.post('http://localhost:8080/GLibrary/library/bookmanagement/delete' ,
+                this.marshal(this.bookInfo)).then(
+                function(response) {
+                    console.log(response.data);
+                    if(response.data == true)
+                        alert("The book is successfully deleted!");
+                    else {
+                        alert("No book with such information you provided!");
+                    }
+                }
+            );
+        };
+
+    });
+
+    app.controller("userController", function($scope, $http, $cookies, sharedList, $location){
+        localRef = this;
+        this.userInfo={};
+        console.log(this.userInfo);
+
+        this.marshal = function(userInfo) {
+            return {
+                username: userInfo.username,
+                password: userInfo.password,
+                firstname: userInfo.firstname,
+                lastname: userInfo.lastname,
+                type: 1
+            };
+        };
+
+        this.addUser = function(){
+            //alert("we are here!");
+            console.log(this.userInfo);
+            $http.post('http://localhost:8080/GLibrary/library/usermanagement/add' ,
+                this.marshal(this.userInfo)).then(
+                function(response) {
+                    console.log(response.data);
+                    if(response.data == 0){
+                        alert("The user is successfully added!");
+                    }
+                    else if (response.data == -2){
+                        alert("This username already exists! Choose another one");
+                    }
+                    else {
+                        alert("Some internal Error happenedTry Again!");
+                    }
+                }
+            );
+        };
+
+        this.cancelUser = function(){
+            //alert("we are here!");
+            console.log(this.bookInfo);
+            $location.url('/')
+        };
+
+    });
 
 })();

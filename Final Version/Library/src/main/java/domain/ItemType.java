@@ -15,4 +15,16 @@ public enum ItemType {
         }
         return null;
     }
+
+    public Integer toInteger() {
+        switch(this) {
+            case PUBLICATION:
+                return 1;
+            case AUDIOPROGRAM:
+                return 2;
+            case VISUALPROGRAM:
+                return 3;
+        }
+        return null;
+    }
 }

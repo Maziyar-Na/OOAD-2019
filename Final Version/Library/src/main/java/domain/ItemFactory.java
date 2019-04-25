@@ -19,6 +19,7 @@ public class ItemFactory {
         item.setIsbn_num(vo.getIsbn_num());
         item.setDate(vo.getSince_date());
         item.setAvailable(vo.getAvailable());
+        item.setType(type);
         return item ;
     }
 }

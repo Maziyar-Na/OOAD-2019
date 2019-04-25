@@ -14,10 +14,10 @@ public class ConnectionDao {
     private String urlString = null;
 
     public ConnectionDao(){
-        this.jdbcHost = "localhost:8889";
+        this.jdbcHost = "localhost:3306";
         this.dbName = "Library";
         this.userName = "root";
-        this.password = "root";
+        this.password = "";
     }
 
 

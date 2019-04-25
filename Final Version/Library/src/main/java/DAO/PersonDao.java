@@ -38,7 +38,26 @@ public class PersonDao {
 
     public Integer savePerson(Person person){
         System.out.println("Placeholder for savePerson");
-        return -1;
+        if (this.connect() == 0) {
+            try {
+                ResultSet rs = connectionDao
+                        .execute_select("SELECT * FROM User WHERE username = '" + person.getUsername() +"';");
+                if (rs.next())
+                    return -2;
+                connectionDao.execute_other_query("INSERT INTO User (username, password, name, type)" +
+                        "VALUES ('" + person.getUsername() + "', '" + person.getPassword() + "', '" + person.getName() +"', "+ person.getType().toInteger() +")");
+                System.out.println("[dbg]Patron has been added\n");
+                return 0;
+            } catch (SQLException e) {
+                System.out.println("SQL Exception in insert");
+                e.printStackTrace();
+                return -1;
+            }
+        }
+        else {
+            System.out.println("[dbg] cannot connect to db!");
+            return -1;
+        }
     }
 
     public Integer deletePerson(Integer id){
