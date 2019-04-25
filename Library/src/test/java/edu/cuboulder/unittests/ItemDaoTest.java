@@ -1,5 +1,4 @@
 package edu.cuboulder.unittests;
-import domain.Inventory;
 import domain.Item;
 import domain.ItemType;
 import DAO.InventoryDao;
@@ -7,7 +6,8 @@ import domain.Publication;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.List;
+
+/* Combining both unit and integration tests for speed of testing */
 public class ItemDaoTest {
     private Publication pub;
     private String BN = "DUNE";

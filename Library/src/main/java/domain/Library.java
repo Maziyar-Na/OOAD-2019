@@ -35,8 +35,11 @@ public class Library {
     }
 
     public Double getTotalLateFees(List<Person> patrons){
-        System.out.println("Placeholder for getTotalLateFees");
-        return 0.0;
+        Double lateFee =0.0;
+        for (Person pp : patrons){
+            lateFee += lateFee +pp.getOutStandingFees();
+        }
+        return lateFee;
     }
 
     public Person modifyPerson(Person person){

@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.List;
 
-/* Combining both unit and integration tests */
+/* Combining both unit and integration tests for speed of testing */
 public class PersonDaoTest {
     private Patron patron;
     private String  DJB ="dbrowne";
