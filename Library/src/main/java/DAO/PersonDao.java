@@ -160,6 +160,12 @@ public class PersonDao {
         return 0;
     }
 
+
+    public Integer modifyPerson(Person person){
+        Integer delRc = deletePerson(person.getId());
+        Integer addRc = savePerson(person);
+        return delRc+addRc;
+    }
     public Integer deletePerson(Integer id){
         try {
             String del = "DELETE from USER where ID = ?";

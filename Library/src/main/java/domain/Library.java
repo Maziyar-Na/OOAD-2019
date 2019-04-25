@@ -42,9 +42,12 @@ public class Library {
         return lateFee;
     }
 
-    public Person modifyPerson(Person person){
-        System.out.println("modify person place holder");
-        return null;
+    public Integer modifyPerson(Person person){
+        Integer rc;
+        PersonDao pd = new PersonDao();
+        pd.connect();
+        rc = pd.modifyPerson(person);
+        return rc;
     }
 
     public Person login(UserVO uvo){
