@@ -15,6 +15,7 @@
 
     <properties>
         <mysql-version>5.1.47</mysql-version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <dependencies>
@@ -34,6 +35,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->

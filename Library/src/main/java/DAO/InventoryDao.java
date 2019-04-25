@@ -3,6 +3,7 @@ package DAO;
 import domain.*;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -14,7 +15,12 @@ public class InventoryDao {
     private String connectionString = null;
     private String urlString = null;
     private ConnectionDao connectionDao;
-
+    static Integer ID = 1;
+    static Integer BN = 2; /* Book Name */
+    static Integer AUTH = 3; /* Author */
+    static Integer ISB = 4; /* ISBN */
+    static Integer TYP = 5;
+    static Integer AV  = 6;
 
     public Integer connect() {
 
@@ -25,7 +31,7 @@ public class InventoryDao {
             e.printStackTrace();
         }
         if (conn != null) {
-            System.out.println("[dbg] conncetion to db successfully created!");
+            System.out.println("[dbg] connection to db successfully created!");
             return 0;
         } else {
             return -1;
@@ -34,24 +40,70 @@ public class InventoryDao {
     }
 
     public Integer addItem(Item item) {
-        System.out.println("Placeholder for addItem\n");
-        return -1;
+        String ins = "INSERT into BOOK (ID, BOOK_NAME, AUTHOR, ISBN_NUM, TYPE, AVAILABLE values (?, ?,?, ?, ?,? )";
+        try{
+            PreparedStatement ps = conn.prepareStatement(ins);
+            ps.setInt(ID, item.getId());
+            ps.setString(BN,item.getBook_name());
+            ps.setString(AUTH, item.getAuthor());
+            ps.setString(ISB, item.getIsbn_num());
+            ItemType it = item.getType();
+
+            switch(it){
+                case PUBLICATION:
+                    ps.setInt(TYP,1);
+                    break;
+                case AUDIOPROGRAM:
+                    ps.setInt(TYP, 2);
+                    break;
+                case VISUALPROGRAM:
+                    ps.setInt(TYP,3);
+                    break;
+                default:
+                    ps.setInt(TYP,1);
+                    break;
+
+            }
+            ps.execute();
+        }catch(SQLException ex){
+            System.out.println(("SQLException: "+ ex.getMessage()));
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError" + ex.getErrorCode());
+            return -1;
+        }
+        return 0;
     }
 
 
-    public Integer deleteItem(Integer id) {
-        System.out.println("PlaceHolder for deleteItem\n");
-        return -1;
+    public Integer deleteItem(Integer id) {    /* TODO:  possible refactoring here */
+        try {
+            String del = "DELETE from BOOK where ID = ?";
+            PreparedStatement ps = conn.prepareStatement(del);
+            ps.setInt(ID,id);
+            ps.close();
+            conn.close();
+
+        }catch(SQLException ex){
+            System.out.println(("SQLException: "+ ex.getMessage()));
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError" + ex.getErrorCode());
+            return -1;
+        }
+        return 0;
     }
 
     public Integer saveItem(Item item) {
-        System.out.println("Placeholder for saveItem\n");
-        return -1;
+            Integer dd = deleteItem(item.getId());
+            Integer aa = addItem(item);
+
+            return dd+aa;
     }
 
     public Item searchItem(String criteria) {
-        System.out.println("PlaceHolder for searchItem");
+
+        System.out.println("Placeholder for search item");
         return null;
+
     }
 
 

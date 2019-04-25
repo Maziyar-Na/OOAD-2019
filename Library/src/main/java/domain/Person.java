@@ -8,6 +8,54 @@ public abstract class Person{
     private String username;
     private String password;
     private PersonType type;
+    private Item item;
+    private String dob;
+    private String gender;
+    private String email;
+    private String phoneNumber;
+    private Double outStandingFees;
+
+
+    public void setOutStandingFees(Double feee){
+        this.outStandingFees = outStandingFees;
+    }
+
+    public Double getOutStandingFees(){
+        return outStandingFees;
+    }
+
+    public void setPhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+    public String getPhoneNumber(){
+        return  phoneNumber;
+    }
+
+    public void setItem (Item item){
+        this.item = item;
+    }
+    public Item getItem(){
+        return item;
+    }
+    public void setDob(String dob){
+        this.dob = dob;
+    }
+    public String getDob(){return dob;}
+
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+
+    public String getGender(){return gender;}
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public  String getEmail(){return email;}
+
+
+
 
     public void setId(Integer id) {
         this.id = id;

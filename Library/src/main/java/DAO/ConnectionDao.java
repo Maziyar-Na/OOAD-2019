@@ -14,12 +14,31 @@ public class ConnectionDao {
     private String urlString = null;
 
     public ConnectionDao(){
-        this.jdbcHost = "localhost:8889";
+/*        this.jdbcHost = "localhost:8889";
+
         this.dbName = "Library";
         this.userName = "root";
         this.password = "root";
+*/
+
+        this.jdbcHost = "localhost:3306";
+        this.dbName = "Library2";
+        this.userName = "admin";
+        this.password = "ooad2019";
     }
 
+    public Integer close() {
+        try{
+            conn.close();
+        }catch (SQLException ex) {
+            System.out.println(("SQLException: " + ex.getMessage()));
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError" + ex.getErrorCode());
+            return -1;
+        }
+        System.out.println("[dbg] disconnect successful");
+        return 0;
+    }
 
     public Connection connect() throws ClassNotFoundException {
         System.out.println("[dbg] here is the username: " + userName +" and password: " + password);

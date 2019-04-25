@@ -5,10 +5,18 @@ import java.util.Date;
 public abstract class Item{
     private String book_name;
     private String author;
-    private Integer isbn_num;
+    private String isbn_num;
     private Date date;
     private Integer available;
+    private Integer id;
     ItemType type;
+
+    public void setId(Integer id){
+        this.id = id;
+    }
+    public Integer getId(){
+        return id;
+    }
 
     public void setBook_name(String book_name) {
         this.book_name = book_name;
@@ -18,7 +26,7 @@ public abstract class Item{
         this.author = author;
     }
 
-    public void setIsbn_num(Integer isbn_num) {
+    public void setIsbn_num(String isbn_num) {
         this.isbn_num = isbn_num;
     }
 
@@ -42,7 +50,7 @@ public abstract class Item{
         return author;
     }
 
-    public Integer getIsbn_num() {
+    public String getIsbn_num() {
         return isbn_num;
     }
 
