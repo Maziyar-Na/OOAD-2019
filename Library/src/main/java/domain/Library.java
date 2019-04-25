@@ -34,7 +34,7 @@ public class Library {
         return null ;
     }
 
-    public Double getTotalLateFees(List<Person> patrons){
+    public Double getTotalLateFees(List<Person> patrons){ /*TODO:  test this!!!*/
         Double lateFee =0.0;
         for (Person pp : patrons){
             lateFee += lateFee +pp.getOutStandingFees();
@@ -42,7 +42,7 @@ public class Library {
         return lateFee;
     }
 
-    public Integer modifyPerson(Person person){
+    public Integer modifyPerson(Person person){   /*TODO:  test this!!!*/
         Integer rc;
         PersonDao pd = new PersonDao();
         pd.connect();
