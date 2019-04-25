@@ -8,6 +8,30 @@ public abstract class Person implements PersonInterface{
     private String password;
     private PersonType type;
     private Item item;
+    private String dob;
+    private String gender;
+    private String email;
+    private String phoneNumber;
+
+
+
+    public void setDob(String dob){
+        this.dob = dob;
+    }
+    public String getDob(){return dob;}
+
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+
+    public String getGender(){return gender;}
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public  String getEmail(){return email;}
+
 
     public void setType(PersonType type) {
         this.type = type;

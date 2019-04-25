@@ -1,3 +1,5 @@
+package edu.cuboulder.unittests;
+
 import edu.cuboulder.Patron;
 import org.junit.Assert;
 import org.junit.Before;

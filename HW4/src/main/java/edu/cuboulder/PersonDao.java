@@ -3,30 +3,31 @@ import java.sql.Connection;
 import java.util.List;
 public class PersonDao {
 
-    private String jdbcHost = null;
-    private String dbName = null;
-    private String userName = null;
-    private String password = null;
+    /* This should be dynamically loaded but no time */
+    private String jdbcHost = "localhost";
+    private String dbName = "Library";
+    private String userName = "admin";
+    private String password = "ooad2019";
+    private Integer port = 3306;
+    private String TableName = "Person";
 
     private Connection conn = null;
     private String connectionString = null;
     private String urlString = null;
     private ConnectionDao connectionDao;
+    private Connection dbConn;
 
+    private String InsertString = "Insert into %s ()";
 
-    public PersonDao(String jdbcHost, String dbName, String userName, String password) {
-        this.jdbcHost = jdbcHost;
-        this.dbName = dbName;
-        this.userName = userName;
-        this.password = password;
+    public PersonDao() {
     }
 
 
     public Integer connect() {
 
-        connectionDao = new ConnectionDao(jdbcHost, dbName, userName, password);
-        conn = connectionDao.connect();
-        if (conn != null) {
+        connectionDao = new ConnectionDao(jdbcHost, dbName, userName, password,port);
+        this.dbConn = connectionDao.connect();
+        if (dbConn != null) {
             return 0;
         } else {
             return -1;
@@ -46,7 +47,6 @@ public class PersonDao {
     }
 
     public Integer savePerson(Person person){
-        System.out.println("Placeholder for savePerson");
         return -1;
     }
 

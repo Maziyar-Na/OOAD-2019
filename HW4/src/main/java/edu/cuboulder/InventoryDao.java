@@ -14,19 +14,21 @@ public class InventoryDao {
     private String connectionString = null;
     private String urlString = null;
     private ConnectionDao connectionDao;
+    private Integer port = null;
 
 
-    public InventoryDao(String jdbcHost, String dbName, String userName, String password) {
+    public InventoryDao(String jdbcHost, String dbName, String userName, String password, Integer port) {
         this.jdbcHost = jdbcHost;
         this.dbName = dbName;
         this.userName = userName;
         this.password = password;
+        this.port = null;
     }
 
 
     public Integer connect() {
 
-        connectionDao = new ConnectionDao(jdbcHost, dbName, userName, password);
+        connectionDao = new ConnectionDao(jdbcHost, dbName, userName, password,port);
         conn = connectionDao.connect();
         if (conn != null) {
             return 0;

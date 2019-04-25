@@ -17,7 +17,6 @@ public class ItemFactory {
         item.setBook_name(vo.getBook_name());
         item.setAuthor(vo.getAuthor());
         item.setIsbn_num(vo.getIsbn_num().toString()); /*TODO: remove cheap hack*/
-        item.setDate(vo.getSince_date());
         item.setAvailable(vo.getAvailable());
         return item ;
     }

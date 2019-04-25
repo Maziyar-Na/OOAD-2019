@@ -1,3 +1,3 @@
-package edu.cuboulder.integrationtesting
+package edu.cuboulder.integrationtests;
 public interface IntegrationTest {
 }

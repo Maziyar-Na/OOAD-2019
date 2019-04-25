@@ -6,7 +6,6 @@ public abstract class Item{
     private String book_name;
     private String author;
     private String isbn_num;
-    private Date date;
     private Integer available;
     private Integer id;
     ItemType type;
@@ -30,9 +29,6 @@ public abstract class Item{
         this.isbn_num = isbn_num;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     public void setAvailable(Integer available) {
         this.available = available;
@@ -54,9 +50,6 @@ public abstract class Item{
         return isbn_num;
     }
 
-    public Date getDate() {
-        return date;
-    }
 
     public Integer getAvailable() {
         return available;
