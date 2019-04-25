@@ -21,12 +21,31 @@ public class ItemDaoTest {
     public void initialize(){
         pub = new Publication();
         pub.setId(ID);
-        pub.getBook_name(BN);
+        pub.setBook_name(BN);
         pub.setIsbn_num(ISBN);
         pub.setType(IT);
         pub.setAuthor(AUTH);
         pub.setAvailable(AV);
     }
 
+    @Test
+    public void testPubVals(){
+        Assert.assertEquals(pub.getId().intValue(),ID.intValue());
+        Assert.assertEquals(pub.getIsbn_num(),ISBN);
+        Assert.assertEquals(pub.getAuthor(),AUTH);
+        Assert.assertEquals(pub.getType(),IT);
+        Assert.assertEquals(pub.getAvailable(),AV);
+        Assert.assertEquals(pub.getBook_name(),BN);
+
+    }
+    @Test
+    public void testDBConnect(){
+        Integer rc;
+        InventoryDao id =new InventoryDao();
+        rc = id.connect();
+        Assert.assertEquals(rc.intValue(), 0);
+        rc = id.close();
+        Assert.assertEquals(rc.intValue(), 0);
+    }
 
 }

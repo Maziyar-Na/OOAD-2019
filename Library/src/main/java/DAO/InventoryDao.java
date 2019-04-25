@@ -39,6 +39,20 @@ public class InventoryDao {
 
     }
 
+
+    public Integer close(){
+        try {
+            conn.close();
+        }catch(SQLException ex){  /* TODO: clean up */
+            System.out.println(("SQLException : "+ ex.getMessage()));
+            System.out.println("SQLState : " + ex.getSQLState());
+            System.out.println("VendorError" + ex.getErrorCode());
+            return -1;
+        }
+        return 0;
+
+    }
+
     public Integer addItem(Item item) {
         String ins = "INSERT into BOOK (ID, BOOK_NAME, AUTHOR, ISBN_NUM, TYPE, AVAILABLE values (?, ?,?, ?, ?,? )";
         try{
