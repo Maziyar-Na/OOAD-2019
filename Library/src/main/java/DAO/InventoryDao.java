@@ -1,11 +1,7 @@
 package DAO;
-
 import domain.*;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,13 +50,14 @@ public class InventoryDao {
     }
 
     public Integer addItem(Item item) {
-        String ins = "INSERT into BOOK (ID, BOOK_NAME, AUTHOR, ISBN_NUM, TYPE, AVAILABLE values (?, ?,?, ?, ?,? )";
+        String ins = "INSERT into BOOK (ID, BOOK_NAME, AUTHOR, ISBN_NUM, TYPE, AVAILABLE) values (?, ?,?, ?, ?,? )";
         try{
             PreparedStatement ps = conn.prepareStatement(ins);
             ps.setInt(ID, item.getId());
             ps.setString(BN,item.getBook_name());
             ps.setString(AUTH, item.getAuthor());
             ps.setString(ISB, item.getIsbn_num());
+            ps.setInt(AV,item.getAvailable());
             ItemType it = item.getType();
 
             switch(it){
@@ -94,8 +91,7 @@ public class InventoryDao {
             String del = "DELETE from BOOK where ID = ?";
             PreparedStatement ps = conn.prepareStatement(del);
             ps.setInt(ID,id);
-            ps.close();
-            conn.close();
+            ps.execute();
 
         }catch(SQLException ex){
             System.out.println(("SQLException: "+ ex.getMessage()));
@@ -114,8 +110,29 @@ public class InventoryDao {
     }
 
     public Item searchItem(String criteria) {
+        try{
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(criteria);
+            if (rs.next() == true) {
+                Publication pb = new Publication();
+                pb.setId(rs.getInt(ID));
+                pb.setAuthor(rs.getString(AUTH));
+                pb.setIsbn_num(rs.getString(ISB));
+                pb.setAvailable(rs.getInt(AV));
+                pb.setBook_name(rs.getString(BN));
+                pb.setType(ItemType.PUBLICATION);  /* TODO: get rid of hard code */
+                st.close();
+                return pb;
+            }
 
-        System.out.println("Placeholder for search item");
+        }catch(SQLException ex){
+            System.out.println(("SQLException: "+ ex.getMessage()));
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError" + ex.getErrorCode());
+            return null;
+        }
+
+
         return null;
 
     }

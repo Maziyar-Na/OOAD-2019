@@ -48,4 +48,31 @@ public class ItemDaoTest {
         Assert.assertEquals(rc.intValue(), 0);
     }
 
+    @Test
+    public void testAddAndDelete(){
+        Integer rc;
+        Item retItem;
+        InventoryDao id = new InventoryDao();
+        rc = id.connect();
+        Assert.assertEquals(rc.intValue(), 0);
+        rc = id.addItem(pub);
+        Assert.assertEquals(rc.intValue(), 0);
+        String qry = "Select * from book where id = " + ID;
+        retItem = id.searchItem(qry);
+        Assert.assertEquals(retItem.getId().intValue(),ID.intValue());
+        Assert.assertEquals(retItem.getIsbn_num(),ISBN);
+        Assert.assertEquals(retItem.getAuthor(),AUTH);
+        Assert.assertEquals(retItem.getType(),IT);
+        Assert.assertEquals(retItem.getAvailable(),AV);
+        Assert.assertEquals(retItem.getBook_name(),BN);
+
+        rc = id.deleteItem(pub.getId());
+
+        Assert.assertEquals(rc.intValue(), 0);
+        rc = id.close();
+        Assert.assertEquals(rc.intValue(), 0);
+
+
+    }
+
 }
