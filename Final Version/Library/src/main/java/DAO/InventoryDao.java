@@ -109,7 +109,7 @@ public class InventoryDao {
                     isbn_num = "";
                 }
                 else {
-                    isbn_num = bvo.getSince_date().toString();
+                    isbn_num = bvo.getIsbn_num();
                 }
                 if(bvo.getSince_date() == null){
                     mdate = new java.sql.Date(0, 0, 1);
@@ -125,7 +125,7 @@ public class InventoryDao {
                     BookVO svo = new BookVO();
                     svo.setBook_name(rs.getString("book_name"));
                     svo.setAuthor(rs.getString("author"));
-                    svo.setIsbn_num(rs.getInt("isbn_num"));
+                    svo.setIsbn_num(rs.getString("isbn_num"));
                     svo.setSince_date(rs.getDate("date"));
                     svo.setType(rs.getInt("type"));
                     svo.setAvailable(rs.getInt("available"));

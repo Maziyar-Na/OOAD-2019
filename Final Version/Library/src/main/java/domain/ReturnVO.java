@@ -3,7 +3,7 @@ package domain;
 public class ReturnVO {
     String username;
     String book_name;
-    Integer isbn_num;
+    String isbn_num;
 
     public String getUsername() {
         return username;
@@ -13,7 +13,7 @@ public class ReturnVO {
         return book_name;
     }
 
-    public Integer getIsbn_num() {
+    public String getIsbn_num() {
         return isbn_num;
     }
 
@@ -25,7 +25,7 @@ public class ReturnVO {
         this.book_name = book_name;
     }
 
-    public void setIsbn_num(Integer isbn_num) {
+    public void setIsbn_num(String isbn_num) {
         this.isbn_num = isbn_num;
     }
 }

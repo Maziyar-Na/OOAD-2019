@@ -196,6 +196,13 @@
     app.controller("cartController", function($scope, $http, $cookies, sharedList, $location){
         localRef = this;
         this.cart = [];
+        if ($cookies.get("accessLevel" )  == undefined || $cookies.get("accessLevel" ) == 1){
+            this.showReserve = true;
+        }
+        else if($cookies.get("accessLevel" ) == 2 || $cookies.get("accessLevel" ) == 3){
+            this.showReserve = false;
+        }
+
         if($cookies.get('cart') != undefined) {
             this.cart = JSON.parse($cookies.get('cart'));
             console.log(this.cart);
@@ -238,6 +245,7 @@
                     if(response.data == true) {
                         console.log(localRef.cart);
                         sharedList.setList(localRef.cart);
+                        $cookies.put('cart', undefined) ;
                         $location.url('/receipt');
                     }
                     else {

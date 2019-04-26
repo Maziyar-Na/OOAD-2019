@@ -5,7 +5,7 @@ import java.sql.Date;
 public class BookVO {
     String book_name;
     String author;
-    Integer isbn_num;
+    String isbn_num;
     Date since_date;
     Integer type;
     Integer available;
@@ -18,7 +18,7 @@ public class BookVO {
         this.author = author;
     }
 
-    public void setIsbn_num(Integer isbn_num) {
+    public void setIsbn_num(String isbn_num) {
         this.isbn_num = isbn_num;
     }
 
@@ -42,7 +42,7 @@ public class BookVO {
         return author;
     }
 
-    public Integer getIsbn_num() {
+    public String getIsbn_num() {
         return isbn_num;
     }
 
