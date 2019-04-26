@@ -37,10 +37,11 @@ public class Inventory {
 
     //a helper function for converting BokkVO to items of inventory
     public List<Item> convert_BookVO_to_Item(List<BookVO>bvos){
+        List<Item>temp = new ArrayList<Item>();
         for (BookVO E:bvos) {
-            items.add(ItemFactory.makeItem(E));
+            temp.add(ItemFactory.makeItem(E));
         }
-        return items;
+        return temp;
     }
 
     //search in the inventory for a book with defined criteria in the search form

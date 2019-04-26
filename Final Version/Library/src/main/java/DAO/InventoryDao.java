@@ -61,8 +61,7 @@ public class InventoryDao {
         System.out.println("Placeholder for addItem\n");
         if (this.connect() == 0) {
             try {
-                connectionDao.execute_other_query("DELETE FROM Book WHERE book_name = '" + item.getBook_name() +
-                        "' AND author = '" + item.getAuthor() + "' AND isbn_num = '" + item.getIsbn_num() + "' AND date = '"+item.getDate() +"';");
+                connectionDao.execute_other_query("DELETE FROM Book WHERE  isbn_num = '" + item.getIsbn_num() + "';");
                 System.out.println("[dbg]Item has been deleted!\n");
                 return 0;
             } catch (SQLException e) {

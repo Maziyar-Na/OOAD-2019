@@ -176,7 +176,7 @@ is explaining what is its role, explaining all the details is out of the scope *
         console.log(this.searchResults);
 
         this.addToCart = function(index){
-            alert("click ok to continue reserving!");
+            alert("click ok to continue adding!");
             console.log(index);
             console.log(this.searchResults[index]);
             this.cart.push(this.searchResults[index]);
@@ -216,7 +216,7 @@ is explaining what is its role, explaining all the details is out of the scope *
         }
 
         this.removeFromCart = function(index){
-            alert("click ok to continue reserving!");
+            alert("click ok to continue removing!");
             console.log(index);
             console.log(this.cart[index]);
             this.cart.splice(index, 1);
