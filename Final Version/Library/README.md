@@ -2,7 +2,7 @@ __OOAD Spring 2019__
 
 <h2>Project Name: Library System Web Application</h2>
 
-<h4>Team Members:</h4>
+<h3>Team Members:</h3>
 
 - Sepideh Goodarzy
 
