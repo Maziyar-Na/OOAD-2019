@@ -1,14 +1,15 @@
 __OOAD Spring 2019__
 
-<h5>Project Name: Library System Web Application</h5>
+<h2>Project Name: Library System Web Application</h2>
 
-Team Members:
-Sepideh Goodarzy
-Maram Kurdi
-Dwight Browne
-Maziyar Nazari
+<h4>Team Members:</h4>
+- Sepideh Goodarzy
+- Maram Kurdi
+- Dwight Browne
+- Maziyar Nazari
 
-Overview:
+<h4>Overview:</h4>
+
 A web application implemented to automate some basic procedures which are being done in a library. This functionalities include the following:
 
 - Have implemented different access levels for 3 types of people: Patron, Librarian and Admin (in Login phase)
@@ -25,18 +26,29 @@ A web application implemented to automate some basic procedures which are being 
 
 - Have implemented a functionality in which the librarian can request to return an item which was borrowed before, on behalf of the user who got the item and getting the late fees(if there was any) out of the system and receive the late fee from the Patron and then Patron can request to borrow another item
 
-Description of the files in repo:
+<h4>Description of the files in repo:</h4>
+
 The Library folder is the final project. 
-Library/src: includes all the source codes.
-Library/src/main/java: Includes all java codes and packages.
-Library/src/main/java/DAO: Includes all Java classes which play role as data access objects. They are responsible for knowing the interface of the database(how to deal with database which here is MySQL) and get the requests from the domain layer and make an appropriate query to send it to the database, then send back an appropriate well-shaped response to the domain layer.
-Library/src/main/java/domain: This package includes all of the classes needed for the core logic of the program. all of the objects other that Data Access Objects are in this package(layer) and talk to each other based on class diagram relations and provide the core functionality of the system.
-Library/src/main/java/service: all of the java servlets that accept the request from the frontend side are in this folder's packages. Different services like search management, login management, etc are assigned to different URLs so that when we want to call some service like "login" we will request to the URL of the login management service and use the response which it will provide to the frontend side.
-Library/src/main/webapp: includes all html pages which we have in the frontend side of our web application. in other words the view+controller layer of our app.
-Library/src/main/webapp/assets/js: includes all of the js files which we used in our web app and includes the controllers implemented using AngularJS, pure JS and JQuery.
-Library/src/main/webapp/WEB-INF: includes web.xml configuration file that Apache Tomcat server needs to route frontend request correctly to the java servlets
-Library/pom.xml: Used by maven build tool. Using this type of file we can configure and mention how the project will be built. For example, adding dependencies(like junit,etc), mention plugins needed, the way that we want our project being built(war, jar,etc).
-*** You can find the description of each single file is provided under the "purpose" tag in the file itself
+
+> Library/src: includes all the source codes.
+
+> Library/src/main/java: Includes all java codes and packages.
+
+> Library/src/main/java/DAO: Includes all Java classes which play role as data access objects. They are responsible for knowing the interface of the database(how to deal with database which here is MySQL) and get the requests from the domain layer and make an appropriate query to send it to the database, then send back an appropriate well-shaped response to the domain layer.
+
+> Library/src/main/java/domain: This package includes all of the classes needed for the core logic of the program. all of the objects other that Data Access Objects are in this package(layer) and talk to each other based on class diagram relations and provide the core functionality of the system.
+
+> Library/src/main/java/service: all of the java servlets that accept the request from the frontend side are in this folder's packages. Different services like search management, login management, etc are assigned to different URLs so that when we want to call some service like "login" we will request to the URL of the login management service and use the response which it will provide to the frontend side.
+
+> Library/src/main/webapp: includes all html pages which we have in the frontend side of our web application. in other words the view+controller layer of our app.
+
+> Library/src/main/webapp/assets/js: includes all of the js files which we used in our web app and includes the controllers implemented using AngularJS, pure JS and JQuery.
+
+> Library/src/main/webapp/WEB-INF: includes web.xml configuration file that Apache Tomcat server needs to route frontend request correctly to the java servlets
+
+> Library/pom.xml: Used by maven build tool. Using this type of file we can configure and mention how the project will be built. For example, adding dependencies(like junit,etc), mention plugins needed, the way that we want our project being built(war, jar,etc).
+
+> *** You can find the description of each single file is provided under the "purpose" tag in the file itself
 
 Notes on Installing and Executing:
 Prerequisites: 
