@@ -3,12 +3,16 @@ __OOAD Spring 2019__
 <h2>Project Name: Library System Web Application</h2>
 
 <h4>Team Members:</h4>
+
 - Sepideh Goodarzy
+
 - Maram Kurdi
+
 - Dwight Browne
+
 - Maziyar Nazari
 
-<h4>Overview:</h4>
+<h3>Overview:</h3>
 
 A web application implemented to automate some basic procedures which are being done in a library. This functionalities include the following:
 
@@ -26,9 +30,9 @@ A web application implemented to automate some basic procedures which are being 
 
 - Have implemented a functionality in which the librarian can request to return an item which was borrowed before, on behalf of the user who got the item and getting the late fees(if there was any) out of the system and receive the late fee from the Patron and then Patron can request to borrow another item
 
-<h4>Description of the files in repo:</h4>
+<h3>Description of the files in repo:</h3>
 
-The Library folder is the final project. 
+> The Library folder is the final project. 
 
 > Library/src: includes all the source codes.
 
@@ -50,18 +54,23 @@ The Library folder is the final project.
 
 > *** You can find the description of each single file is provided under the "purpose" tag in the file itself
 
-Notes on Installing and Executing:
-Prerequisites: 
+<h3>Notes on Installing and Executing:</h3>
+
+<h4>Prerequisites:</h4> 
+
 - MySQL
+
 - Apache Tomcat 9
+
 - Maven
 
-Executing: 
+<h4>Executing:</h4> 
 
 - Download the Library folder
-*** Note: if you have an IDE like Intellij you can simply open the folder in you IDE.
 
-*** Note: Make sure that you have pom.xml file and src folder
+> *** Note: if you have an IDE like Intellij you can simply open the folder in you IDE.
+
+> *** Note: Make sure that you have pom.xml file and src folder
 
 - Reimport the maven project's dependencies in Intellij IDEA. Or run "mvn build" to download the dependencies needed for the project.
 
