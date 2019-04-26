@@ -163,6 +163,7 @@
         localRef = this;
         this.searchResults = sharedList.getList();
         this.cart = []
+        this.sortType = 1;
         if ( $cookies.get('cart') != undefined)
             this.cart = JSON.parse($cookies.get('cart'));
         console.log(this.searchResults);
@@ -180,8 +181,14 @@
             $location.url("/cart");
         };
         
-        this.sort = function () {
-            
+        this.sort = function (sortType) {
+            $http.post('http://localhost:8080/GLibrary/library/searchmanagement/sort='+this.sortType ,
+                this.searchResults).then(
+                function(response) {
+                    localRef.searchResults = response.data;
+                    console.log(localRef.searchResults);
+                }
+            );
         }
 
     });

@@ -25,4 +25,14 @@ public class SearchManagement {
         return result ;
     }
 
+    @POST
+    @Path("/sort={sid}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<BookVO> sort(List<BookVO> bvos , @PathParam("sid")int sortId) throws IOException, ClassNotFoundException {
+        System.out.println("[dbg] yes we got here in the sort servlet! sort id is: " + sortId);
+        List<BookVO> result = Inventory.getInstance().sort(bvos, SortType.fromInteger(sortId));
+        return result ;
+    }
+
 }

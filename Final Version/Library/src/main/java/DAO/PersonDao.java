@@ -254,19 +254,33 @@ public class PersonDao {
                 e.printStackTrace();
                 return -1;
             }
-            System.out.println("[dbg] Now we are deleting the borrowed item!");
+            System.out.println("[dbg] Now we are looking for the borrowed item!");
             try {
-                connectionDao
-                        .execute_other_query("DELETE FROM Borrowed WHERE user_id = '" + userId + "' AND book_id ='" + bookId +"';");
-            } catch (SQLException e) {
-                System.out.println("[dbg] SQL Exception happened!");
-                e.printStackTrace();
-                return -1;
-            }
-            System.out.println("[dbg] Now we are increasing the availability of item!");
-            try {
-                connectionDao.execute_other_query("UPDATE Book SET available = available + 1 WHERE id = "+ bookId+";");
-                return 0;
+                ResultSet rs = connectionDao
+                        .execute_select("SELECT * FROM Borrowed WHERE user_id = '" + userId + "' AND book_id ='" + bookId +"';");
+                if(rs.next()) {
+                    System.out.println("[dbg] Now we are deleting the borrowed item!");
+                    try {
+                        connectionDao
+                                .execute_other_query("DELETE FROM Borrowed WHERE user_id = '" + userId + "' AND book_id ='" + bookId +"';");
+                    } catch (SQLException e) {
+                        System.out.println("[dbg] SQL Exception happened!");
+                        e.printStackTrace();
+                        return -1;
+                    }
+                    System.out.println("[dbg] Now we are increasing the availability of item!");
+                    try {
+                        connectionDao.execute_other_query("UPDATE Book SET available = available + 1 WHERE id = "+ bookId+";");
+                        return 0;
+                    } catch (SQLException e) {
+                        System.out.println("[dbg] SQL Exception happened!");
+                        e.printStackTrace();
+                        return -1;
+                    }
+                }
+                else {
+                    return -1;
+                }
             } catch (SQLException e) {
                 System.out.println("[dbg] SQL Exception happened!");
                 e.printStackTrace();

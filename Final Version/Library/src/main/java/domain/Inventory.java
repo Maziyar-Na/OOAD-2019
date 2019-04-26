@@ -51,10 +51,10 @@ public class Inventory {
         return ido.searchItems(bvo);
     }
 
-    public List<Item> sort(List<Item> items, SortType sortType){
+    public List<BookVO> sort(List<BookVO> items, SortType sortType){
         SortInterface sortInterface = SortFactory.getSortAction(sortType);
         System.out.println("Placeholder for sort: " + sortInterface);
-        return null;
+        return sortInterface.sort(items);
     }
 
 }

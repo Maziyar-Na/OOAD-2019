@@ -53,13 +53,13 @@
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fas fa-search"></i> Search Item</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sort"></i> Sort options</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" ng-click="result.sort(1)">Sort by date</a>
-          <a class="dropdown-item" ng-click="result.sort(2)">Sort by author</a>
-          <a class="dropdown-item" ng-click="result.sort(3)">Sort by Name</a>
-        </div>
+      <li class="nav-item">
+        <!--<a class="nav-link"><i class="fas fa-sort"></i> Sort options</a>-->
+        <select class="form-control" ng-change="result.sort()" ng-model="result.sortType">
+          <option value="1">Sort by name</option>
+          <option value="2">Sort by author</option>
+          <option value="3">Sort by date</option>
+        </select>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
