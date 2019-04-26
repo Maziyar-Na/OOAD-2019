@@ -1,9 +1,11 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: Item is an abstract class for holding data and functionalities related to different kinds of item that we have in library such as publications and audio program and etc.
 package domain;
 
 import java.util.Date;
 
 public abstract class Item{
-    private String book_name;
+    private String book_name; //this is actually the name of the item
     private String author;
     private String isbn_num;
     private Date date;

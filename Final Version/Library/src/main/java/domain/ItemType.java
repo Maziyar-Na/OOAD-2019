@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: definig an enum for different types of item that we have in inventory
 package domain;
 
 public enum ItemType {

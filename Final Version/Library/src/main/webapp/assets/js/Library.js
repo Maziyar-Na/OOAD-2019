@@ -1,7 +1,14 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
+//purpose: setting the bahaviour of UI by angular JS
+
+/* this file is not OO as it is UI behaviour, it is based on simple angular concepts such as routs, controllers, etc. Although each function name
+is explaining what is its role, explaining all the details is out of the scope */
 (function () {
+
+    //setting an angular app
     var app = angular.module('Library', ['ngRoute', 'ngCookies']);
 
-
+    //defining the routs and controller of each html page
     app.config(function($routeProvider, $locationProvider) {
 
         $routeProvider
@@ -48,7 +55,7 @@
         //$locationProvider.html5Mode(true);
     });
 
-
+    //sharing variable between different controllers
     app.factory('sharedList', function() {
         var list = [];
 

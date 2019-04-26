@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: definig an enum for different types of person that we have in our library
 package domain;
 
 public enum PersonType {

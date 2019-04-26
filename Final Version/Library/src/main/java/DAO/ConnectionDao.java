@@ -1,3 +1,6 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: this class is responsible for connecting to database and executing select and other query on that
+//architecture: DAO directory is the data access layer
 package DAO;
 
 
@@ -20,7 +23,7 @@ public class ConnectionDao {
         this.password = "root";
     }
 
-
+    //connecting to db
     public Connection connect() throws ClassNotFoundException {
         System.out.println("[dbg] here is the username: " + userName +" and password: " + password);
         connectionString = String.format("user=%s&password=%s",userName,password);
@@ -39,6 +42,7 @@ public class ConnectionDao {
 
     }
 
+    //executing select
     public ResultSet execute_select(String query) throws SQLException {
         System.out.println("Query is : " + query);
         Statement statement =  conn.createStatement();
@@ -47,6 +51,7 @@ public class ConnectionDao {
         return resultSet;
     }
 
+    //executing other query
     public void execute_other_query(String query) throws SQLException {
         System.out.println("Query is : " + query);
         Statement statement =  conn.createStatement();

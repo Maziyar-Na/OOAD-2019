@@ -1,12 +1,10 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: Employee additional functionalities
 package domain;
 
 public class Employee extends Person{
 
-    public Integer updateItem(Item x){
-        System.out.println("placholder for updateItem");
-        return 0;
-    }
-
+    //deleting an existing item
     public Integer deleteItem(BookVO bvo){
         System.out.println("Placeholder for deleteItem");
         Item newItem = ItemFactory.makeItem(bvo);
@@ -15,6 +13,7 @@ public class Employee extends Person{
         return 0;
     }
 
+    //adding a new item
     public Integer addItem(BookVO bvo){
         System.out.println("Placeholder for addItem");
         System.out.println("[dbg] here we are in person add item! before factory");

@@ -1,9 +1,14 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: admin additional functionality for adding a new patron
+//domain: domain and service Directory is the domain layer
 package domain;
 
 import DAO.PersonDao;
 import service.userManagement.RegVO;
 
 public class Admin extends Employee {
+
+    //adding a new patron
     public Integer addPatron(RegVO rvo){
         System.out.println("Placeholder for addPatron");
         UserVO uvo = new UserVO();
@@ -22,15 +27,8 @@ public class Admin extends Employee {
         PersonDao pdo = new PersonDao();
         return pdo.savePerson(newPerson);
     }
-    Integer deletePatron(Patron x){
-        System.out.println("Placeholder for deletePatron");
-        return 0;
-    }
-    Integer updatePatron(Patron x){
-        System.out.println("Placeholder for addPatron");
-        return 0;
-    }
 
+    //setting the type of person to ADMIN
     @Override
     public void setType(PersonType type) {
         super.setType(PersonType.ADMIN);

@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: convert the person related functions to strings to be executed on the database
 package DAO;
 import domain.*;
 
@@ -9,11 +11,9 @@ import java.util.List;
 public class PersonDao {
 
     private Connection conn = null;
-    private String connectionString = null;
-    private String urlString = null;
     private ConnectionDao connectionDao;
 
-
+    //say conncetion dao to get conected to db
     public Integer connect() {
 
         connectionDao = new ConnectionDao();
@@ -31,11 +31,7 @@ public class PersonDao {
 
     }
 
-    public List<Person>  loadPeople(){
-        System.out.println("Placeholder for loadPeople\n");
-        return null;
-    }
-
+    //save a new person
     public Integer savePerson(Person person){
         System.out.println("Placeholder for savePerson");
         if (this.connect() == 0) {
@@ -60,11 +56,7 @@ public class PersonDao {
         }
     }
 
-    public Integer deletePerson(Integer id){
-        System.out.println("Placeholder for deletePerson");
-        return -1;
-    }
-
+    //check if a person data for loging into the system is correct or not
     public UserVO checkPerson(UserVO uvo){
         System.out.println("Placeholder for loadPerson\n");
         if (this.connect() == 0) {
@@ -95,6 +87,7 @@ public class PersonDao {
         }
     }
 
+    //borrow items for the patron
     public boolean addBorrowedItems(Person person, BorrowedItem bitem){
         Integer userId , bookId ;
         System.out.println("Placeholder for loadPerson\n");
@@ -156,6 +149,7 @@ public class PersonDao {
         }
     }
 
+    //calculate the late fee for the book that patron wants to return
     public FeeVO calculateFee(ReturnVO rvo){
         Integer userId , bookId ;
         FeeVO fvo = new FeeVO() ;
@@ -217,9 +211,9 @@ public class PersonDao {
         }
     }
 
+    //return the book
     public Integer returnBook(ReturnVO rvo){
         Integer userId , bookId ;
-        FeeVO fvo = new FeeVO() ;
         System.out.println("Placeholder for calculateFee\n");
         if (this.connect() == 0) {
             System.out.println("[dbg] Now we are looking for the targeted user!");

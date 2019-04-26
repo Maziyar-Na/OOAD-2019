@@ -1,8 +1,12 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: to be able to sort search results based on Published dates.
 package domain;
 
 import java.util.List;
 
 public class DateSort implements SortInterface {
+
+    //sort based on Published dates
     public List<BookVO> sort(List<BookVO> items) {
         System.out.print("Date Sort Placeholder");
         BookVO temp = new BookVO();

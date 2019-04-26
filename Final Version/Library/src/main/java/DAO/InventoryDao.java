@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: convert the inventory related functions to strings to be executed on the database
 package DAO;
 
 import domain.*;
@@ -12,11 +14,10 @@ import java.util.List;
 public class InventoryDao {
 
     private Connection conn = null;
-    private String connectionString = null;
-    private String urlString = null;
     private ConnectionDao connectionDao;
 
 
+    //say conncetion dao to get conected to db
     public Integer connect() {
 
         connectionDao = new ConnectionDao();
@@ -34,6 +35,7 @@ public class InventoryDao {
 
     }
 
+    //add item to inventory
     public Integer addItem(Item item) {
         System.out.println("Placeholder for addItem\n");
         if (this.connect() == 0) {
@@ -54,6 +56,7 @@ public class InventoryDao {
         }
     }
 
+    //delete item from inventory
     public Integer deleteItem(Item item) {
         System.out.println("Placeholder for addItem\n");
         if (this.connect() == 0) {
@@ -74,17 +77,8 @@ public class InventoryDao {
 
     }
 
-    public Integer saveItem(Item item) {
-        System.out.println("Placeholder for saveItem\n");
-        return -1;
-    }
 
-    public Item searchItem(String criteria) {
-        System.out.println("PlaceHolder for searchItem");
-        return null;
-    }
-
-
+    //searching items with the criteria defined in search form
     public List<BookVO> searchItems(BookVO bvo) {
         System.out.println("Placeholder for searchItems");
         List<BookVO> bvos = new ArrayList<BookVO>();

@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: definig an enum for different types of sorts that we provide
 package domain;
 
 public enum SortType {

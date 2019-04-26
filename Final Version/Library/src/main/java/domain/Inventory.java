@@ -1,3 +1,6 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: holding the inventory data and implementing functions related to inventory
+//pattern usage: Inventory is based on singleton pattern
 package domain;
 
 import DAO.InventoryDao;
@@ -19,26 +22,20 @@ public class Inventory {
         }
         return instance;
     }
+
+    //adding a new item to inventory
     public Integer addItem(Item item){
         InventoryDao idao = new InventoryDao();
         return idao.addItem(item);
     }
 
-    public Item getItem(String criteria){
-        System.out.println("Placeholder for getItem");
-        return null;
-    }
-
-    public List<Item> getBorrowedItems(){
-        System.out.println("Placeholder for getBorrowed Items\n");
-        return null;
-    }
+    //deleting an Item from inventory
     public Integer deleteItem(Item item){
-        System.out.println("Placeholder for deleteItem\n");
         InventoryDao idao = new InventoryDao();
         return idao.deleteItem(item);
     }
 
+    //a helper function for converting BokkVO to items of inventory
     public List<Item> convert_BookVO_to_Item(List<BookVO>bvos){
         for (BookVO E:bvos) {
             items.add(ItemFactory.makeItem(E));
@@ -46,15 +43,18 @@ public class Inventory {
         return items;
     }
 
+    //search in the inventory for a book with defined criteria in the search form
     public List<BookVO> search(BookVO bvo){
         InventoryDao ido = new InventoryDao();
         return ido.searchItems(bvo);
     }
 
+    //sorting the book in the in the search result
+    //this is part of implementing the strategy pattern for different kinds of sort
     public List<BookVO> sort(List<BookVO> items, SortType sortType){
-        SortInterface sortInterface = SortFactory.getSortAction(sortType);
+        SortInterface sortInterface = SortFactory.getSortAction(sortType); //setting the behaviour
         System.out.println("Placeholder for sort: " + sortInterface);
-        return sortInterface.sort(items);
+        return sortInterface.sort(items); //implementing the sort itself
     }
 
 }

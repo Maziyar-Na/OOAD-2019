@@ -1,5 +1,9 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
+//purpose: this file only works as a data holder for passing the data from view layer to domain layer and also for passing the data between domain layer and data access layer
 package domain;
 
+
+//the data elements + getters an setters
 public class ReturnVO {
     String username;
     String book_name;

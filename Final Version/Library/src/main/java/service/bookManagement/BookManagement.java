@@ -1,3 +1,7 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
+//purpose: adding and deleting a book requests by Employee comes here
+//use of Java's Reflection capability
+
 package service.bookManagement;
 
 import domain.BookVO;

@@ -1,6 +1,11 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: for making new items in our inventory
+//pattern usage: we used the simple factory  pattern in here
 package domain;
 
 public class ItemFactory {
+
+    //makes a new Item based on type of it
     public static Item makeItem(BookVO vo){
         ItemType type = ItemType.fromInteger(vo.getType());
         Item item ;

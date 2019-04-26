@@ -1,3 +1,6 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: this file is for holding the information related to each borroewd item such as the data that is borrowed, the day it should be returned,
+//         the late fee rate for each day
 package domain;
 
 import java.sql.Date;
@@ -29,6 +32,7 @@ public class BorrowedItem {
         this.borrowDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());;
     }
 
+    //this function is responsible for setting the return date to 7 days after borrowing date.
     public void setReturnDate() {
         java.util.Date currentDate;
         currentDate = new java.util.Date();

@@ -1,3 +1,6 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: for making a new person based on the type of it in our library
+//patern usage: we used the simple factory  pattern in here
 package domain;
 
 public class PersonFactory {

@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose:  patron additional functionality
 package domain;
 
 import DAO.PersonDao;
@@ -7,23 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Patron extends Person {
-    private Double outStandingFees;
     List<BorrowedItem> borrowedItems;
 
-    public Patron(){
-        outStandingFees = 0.0;
+    public Patron() {
         borrowedItems = new ArrayList<BorrowedItem>();
-        setType(PersonType.PATRON);
-    }
-
-    public Double getOutStandingFees() {
-        return outStandingFees;
     }
 
     public List<BorrowedItem> getBorrowedItems() {
         return borrowedItems;
     }
 
+    //patron updating his/her borrowed items
     public void addBorrowedItems(List<Item> Items) {
         PersonDao pdo = new PersonDao();
         for (Item item:
@@ -37,20 +33,13 @@ public class Patron extends Person {
         }
     }
 
-    public void setOutStandingFees(Double outStandingFees) {
-        this.outStandingFees = outStandingFees;
-    }
-
-    public int payFee(){
-        System.out.println("placeholder for payFee");
-        return 0;
-    }
-
+    //setting the type of person to PATRON
     @Override
     public void setType(PersonType type) {
         super.setType(PersonType.PATRON);
     }
 
+    //patron borrowing a list of items
     public boolean borrow(List<Item>items){
         System.out.println("[dbg] correct borrow");
         this.addBorrowedItems(items);

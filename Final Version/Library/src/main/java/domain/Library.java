@@ -1,3 +1,6 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: this is the Library main class
+//pattern usage: Library is based on singleton pattern
 package domain;
 
 import DAO.PersonDao;
@@ -6,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
+
+    //
     private static Library instance ;
     private List<Person> users ;
 
@@ -20,10 +25,12 @@ public class Library {
         return instance ;
     }
 
+    //adding an active person (someone who is logged into the system) to the list of active users
     public void addPerson(Person p){
         users.add(p);
     }
 
+    //this function is used for getting an active person based on its username
     public Person getPerson(String username){
         for (Person user:
              this.getUsers()) {
@@ -34,16 +41,7 @@ public class Library {
         return null ;
     }
 
-    public Double getTotalLateFees(List<Person> patrons){
-        System.out.println("Placeholder for getTotalLateFees");
-        return 0.0;
-    }
-
-    public Person modifyPerson(Person person){
-        System.out.println("modify person place holder");
-        return null;
-    }
-
+    //login a person
     public Person login(UserVO uvo){
         System.out.println("Placeholder for login");
         PersonDao pd = new PersonDao();

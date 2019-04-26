@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: to be able to sort search results based on Item Names.
 package domain;
 
 import java.util.ArrayList;
@@ -5,6 +7,7 @@ import java.util.List;
 
 public class NameSort implements SortInterface {
 
+    //sort based on item names
     public List<BookVO> sort(List<BookVO> items) {
 
         BookVO temp = new BookVO();

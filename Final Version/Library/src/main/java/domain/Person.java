@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: an abstract class for holding the data and basic functioalites related to the people are using our system
 package domain;
 
 import java.util.List;

@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
+//purpose: login requests by Users comes here
 package service.loginManagement;
 
 import domain.Library;

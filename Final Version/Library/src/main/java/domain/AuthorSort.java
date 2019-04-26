@@ -1,8 +1,12 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari, Dwight Brown
+//purpose: to be able to sort search results based on Author names.
 package domain;
 
 import java.util.List;
 
 public class AuthorSort implements SortInterface {
+
+    //sort based on author names
     public List<BookVO> sort(List<BookVO> items) {
         System.out.println("AuthorSort Placeholder\n ");
         BookVO temp = new BookVO();

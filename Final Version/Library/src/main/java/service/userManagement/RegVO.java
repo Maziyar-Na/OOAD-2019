@@ -1,3 +1,4 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
 package service.userManagement;
 
 public class RegVO {

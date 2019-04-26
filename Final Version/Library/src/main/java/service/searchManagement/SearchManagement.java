@@ -1,3 +1,5 @@
+//authors: Sepideh Goodarzy, Maziyar Nazari
+//purpose: searching for book requests comes here
 package service.searchManagement;
 import domain.*;
 
