@@ -25,7 +25,6 @@ public class LoginManagement {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Integer login(UserVO uvo) throws IOException, ClassNotFoundException {
-        System.out.println("[dbg] yes we got here in the servlet!");
         Person result = Library.getInstance().login(uvo);
         if(result != null) {
             HttpSession session = request.getSession();

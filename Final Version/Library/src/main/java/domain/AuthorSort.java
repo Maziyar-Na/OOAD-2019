@@ -8,7 +8,6 @@ public class AuthorSort implements SortInterface {
 
     //sort based on author names
     public List<BookVO> sort(List<BookVO> items) {
-        System.out.println("AuthorSort Placeholder\n ");
         BookVO temp = new BookVO();
         BookVO min = items.get(0);
         for (int i = 0; i < items.size(); i++) {

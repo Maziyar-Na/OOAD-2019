@@ -43,7 +43,6 @@ public class Library {
 
     //login a person
     public Person login(UserVO uvo){
-        System.out.println("Placeholder for login");
         PersonDao pd = new PersonDao();
         UserVO activeUserVO = pd.checkPerson(uvo);
         if ( activeUserVO != null){

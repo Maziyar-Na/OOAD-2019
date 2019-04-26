@@ -26,7 +26,6 @@ public class ReserveManagement {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public boolean reserve(List<BookVO> bvos) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-        System.out.println("[dbg] yes we got here in the servlet!");
         HttpSession session = request.getSession(false);
         if( session == null){
             return false ;

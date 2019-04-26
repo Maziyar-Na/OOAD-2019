@@ -53,7 +53,6 @@ public class Inventory {
     //this is part of implementing the strategy pattern for different kinds of sort
     public List<BookVO> sort(List<BookVO> items, SortType sortType){
         SortInterface sortInterface = SortFactory.getSortAction(sortType); //setting the behaviour
-        System.out.println("Placeholder for sort: " + sortInterface);
         return sortInterface.sort(items); //implementing the sort itself
     }
 

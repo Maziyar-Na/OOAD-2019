@@ -21,7 +21,6 @@ public class Librarian extends Employee {
                 return 0 ;
             else {
                 long numberOfDays = (long) ((today.getTime()) - (fvo.getReturn_date().getTime()) / (1000 * 60 * 60 * 24));
-                System.out.println("[dbg] number of days" + numberOfDays);
                 return numberOfDays * (fvo.getLate_fee());
             }
         }

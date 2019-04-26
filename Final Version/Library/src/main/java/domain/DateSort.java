@@ -8,7 +8,6 @@ public class DateSort implements SortInterface {
 
     //sort based on Published dates
     public List<BookVO> sort(List<BookVO> items) {
-        System.out.print("Date Sort Placeholder");
         BookVO temp = new BookVO();
         BookVO min = items.get(0);
         for (int i = 0; i < items.size(); i++) {

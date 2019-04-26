@@ -10,18 +10,11 @@ public class Admin extends Employee {
 
     //adding a new patron
     public Integer addPatron(RegVO rvo){
-        System.out.println("Placeholder for addPatron");
         UserVO uvo = new UserVO();
         uvo.setName(rvo.getFirstname() + " " + rvo.getLastname());
         uvo.setPassword(rvo.getPassword());
-        System.out.println("[dbg] before we get type from rvo!" + rvo.getType());
         uvo.setType(PersonType.fromInteger(rvo.getType()));
         uvo.setUsername(rvo.getUsername());
-        System.out.println("[dbg] There is no Error until we use the factory!");
-        System.out.println("[dbg] uvo: " + uvo.getUsername());
-        System.out.println("[dbg] uvo: " + uvo.getPassword());
-        System.out.println("[dbg] uvo: " + uvo.getType());
-        System.out.println("[dbg] uvo: " + uvo.getName());
 
         Person newPerson = PersonFactory.getPerson(uvo);
         PersonDao pdo = new PersonDao();

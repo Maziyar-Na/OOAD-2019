@@ -54,7 +54,6 @@ public abstract class Person{
 
 
     public boolean borrow(List<Item>items){
-        System.out.println("PlaceHoler for borrow");
         return false;
     }
 

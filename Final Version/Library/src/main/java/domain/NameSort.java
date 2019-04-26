@@ -23,7 +23,6 @@ public class NameSort implements SortInterface {
 
             }
         }
-        System.out.println("Name sort placeholdert\n");
         return items;
     }
 }

@@ -31,14 +31,12 @@ public class BookManagement {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public boolean addBook(BookVO bvo) throws  IllegalAccessException, InstantiationException {
-        System.out.println("[dbg] yes we got here in the add book servlet!");
         HttpSession session = request.getSession();
         String username = (String)session.getAttribute("username");
 
         Person p = Library.getInstance().getPerson(username);
         Class employee = p.getClass();
         Object obj = employee.newInstance();
-        System.out.println("[dbg] the name of the employee class is : " + employee.getName());
         String methodName = "addItem";
         try {
             Method method = employee.getMethod(methodName, BookVO.class);
@@ -48,11 +46,9 @@ public class BookManagement {
             else
                 return true;
         } catch (NoSuchMethodException e) {
-            System.out.printf("[dbg] There is no method called addItem()!");
             e.printStackTrace();
             return false;
         } catch (InvocationTargetException e) {
-            System.out.printf("[dbg] There is no method called addItem()!");
             e.printStackTrace();
             return false;
         }
@@ -63,7 +59,6 @@ public class BookManagement {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public boolean deleteBook(BookVO bvo) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-        System.out.println("[dbg] yes we got here in the delete book servlet!");
         HttpSession session = request.getSession();
         String username = (String)session.getAttribute("username");
 
@@ -81,11 +76,9 @@ public class BookManagement {
             else
                 return true;
         } catch (NoSuchMethodException e) {
-            System.out.printf("[dbg] There is no method called deleteItem()!");
             e.printStackTrace();
             return false;
         } catch (InvocationTargetException e) {
-            System.out.printf("[dbg] There is no method called deleteItem()!");
             e.printStackTrace();
             return false;
         }

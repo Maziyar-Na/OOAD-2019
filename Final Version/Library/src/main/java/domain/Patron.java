@@ -41,7 +41,6 @@ public class Patron extends Person {
 
     //patron borrowing a list of items
     public boolean borrow(List<Item>items){
-        System.out.println("[dbg] correct borrow");
         this.addBorrowedItems(items);
         return true;
     }
